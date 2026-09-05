@@ -1,0 +1,21 @@
+apps/web/src/index.css
+  s_a61e34c9f9312a::t_f9bec5f998c538 164-190
+apps/web/src/components/ui/sidebar.tsx
+  s_a61e34c9f9312a::t_fcebd2f1a07c6b 345-346,348
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.2",
+  "base_commit_sha": "eaaac26b04b53f8bcd864f8510fb1eacc13404cc",
+  "prompts": {},
+  "sessions": {
+    "s_a61e34c9f9312a": {
+      "agent_id": {
+        "tool": "opencode",
+        "id": "ses_f8df6c5e3ffeM4eqrqR7aUnSb4",
+        "model": "muse-spark-1.3-contributor-free"
+      },
+      "human_author": null
+    }
+  }
+}
