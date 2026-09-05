@@ -1,0 +1,25 @@
+apps/web/src/components/layout/AppSidebar.tsx
+  h_bf19f0f446d5d8 40
+  s_918f358ee2e941::t_a48697f16d7d21 35-39,41
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.2",
+  "base_commit_sha": "cd344c83844b5d06f358f6c2cf09487986632923",
+  "prompts": {},
+  "humans": {
+    "h_bf19f0f446d5d8": {
+      "author": "Kathir Eswaran <kathircp007@gmail.com>"
+    }
+  },
+  "sessions": {
+    "s_918f358ee2e941": {
+      "agent_id": {
+        "tool": "opencode",
+        "id": "ses_f8ddd00adffedk4kwqG1AyMKTV",
+        "model": "muse-spark-1.3-contributor-free"
+      },
+      "human_author": "Kathir Eswaran <kathircp007@gmail.com>"
+    }
+  }
+}
