@@ -1,0 +1,19 @@
+apps/web/src/api/health.ts
+  s_91e795268e4fb5::t_e6fdcc4567f5a8 1
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.2",
+  "base_commit_sha": "b9b317933af003d14af82d46b9051f29d867b2e7",
+  "prompts": {},
+  "sessions": {
+    "s_91e795268e4fb5": {
+      "agent_id": {
+        "tool": "opencode",
+        "id": "ses_f8325a79effexHjzlAA549He24",
+        "model": "muse-spark-1.3-contributor-free"
+      },
+      "human_author": "Kathir Eswaran <kathircp007@gmail.com>"
+    }
+  }
+}
