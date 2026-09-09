@@ -10,6 +10,12 @@ const CONNECTION_ID_HEADER = 'x-connection-id';
 // Module-level state for current connection ID
 let currentConnectionId: string | null = null;
 
+// Bounds for the opt-in `timeoutMs` (see FetchApiOptions). Values outside
+// this range are clamped — a timeout must stay long enough to be useful
+// but short enough that a hung request can't gate the UI forever.
+export const MIN_API_TIMEOUT_MS = 1_000;
+export const MAX_API_TIMEOUT_MS = 120_000;
+
 /**
  * Set the current connection ID for all subsequent API requests.
  * This is called by the ConnectionContext when the user switches connections.
@@ -23,6 +29,17 @@ export function setCurrentConnectionId(connectionId: string | null): void {
  */
 export function getCurrentConnectionId(): string | null {
   return currentConnectionId;
+}
+
+interface FetchApiOptions extends RequestInit {
+  /**
+   * Opt-in timeout in ms, combined with any caller-provided `signal`.
+   * Must fall within [MIN_API_TIMEOUT_MS, MAX_API_TIMEOUT_MS];
+   * out-of-range values are clamped to the nearest bound.
+   * When omitted, no timeout is applied (pre-existing behaviour:
+   * the request lives until it settles or the caller aborts).
+   */
+  timeoutMs?: number;
 }
 
 export class PaymentRequiredError extends Error {
@@ -112,8 +129,18 @@ function isPaymentRequiredPayload(payload: unknown): payload is {
   );
 }
 
-async function parseErrorPayload(response: Response): Promise<unknown> {
+async function readBodyText(response: Response): Promise<string | null> {
   const rawBody = await response.text();
+  return rawBody || null;
+}
+
+async function parseErrorPayload(response: Response): Promise<unknown> {
+  let rawBody: string | null;
+  try {
+    rawBody = await readBodyText(response);
+  } catch {
+    return null;
+  }
   if (!rawBody) {
     return null;
   }
@@ -125,15 +152,100 @@ async function parseErrorPayload(response: Response): Promise<unknown> {
   }
 }
 
+async function parseSuccessPayload<T>(response: Response): Promise<T> {
+  if (response.status === 204 || response.status === 205) {
+    return null as T;
+  }
+
+  let rawBody: string | null;
+  try {
+    rawBody = await readBodyText(response);
+  } catch (error) {
+    // eslint-disable-next-line preserve-caught-error
+    throw new Error(
+      `Failed to read response body for ${response.url || 'request'}: ${error instanceof Error ? error.message : String(error)}`,
+    );
+  }
+
+  if (!rawBody) {
+    return null as T;
+  }
+
+  const contentType = response.headers.get('content-type') ?? '';
+  if (contentType && !contentType.includes('application/json') && !contentType.includes('+json')) {
+    const snippet = rawBody.slice(0, 120);
+    throw new Error(
+      `Expected JSON but received "${contentType}" (status ${response.status}): ${snippet}`,
+    );
+  }
+
+  try {
+    return JSON.parse(rawBody) as T;
+  } catch {
+    const snippet = rawBody.slice(0, 120);
+    throw new Error(`Failed to parse JSON response (status ${response.status}): ${snippet}`);
+  }
+}
+
+function combineSignals(callerSignal?: AbortSignal | null, timeoutMs?: number): {
+  signal: AbortSignal | undefined;
+  cleanup: () => void;
+} {
+  if (!timeoutMs || !Number.isFinite(timeoutMs)) {
+    return { signal: callerSignal ?? undefined, cleanup: () => {} };
+  }
+
+  const ms = Math.min(MAX_API_TIMEOUT_MS, Math.max(MIN_API_TIMEOUT_MS, timeoutMs));
+  const timeoutController = new AbortController();
+  const timer = setTimeout(() => {
+    timeoutController.abort(
+      typeof DOMException !== 'undefined'
+        ? new DOMException(`Request timed out after ${ms}ms`, 'TimeoutError')
+        : new Error(`Request timed out after ${ms}ms`),
+    );
+  }, ms);
+  (timer as unknown as { unref?: () => void }).unref?.();
+
+  const cleanup = () => clearTimeout(timer);
+
+  if (!callerSignal) {
+    return { signal: timeoutController.signal, cleanup };
+  }
+
+  // Prefer native composition when available.
+  if (typeof AbortSignal.any === 'function') {
+    return { signal: AbortSignal.any([callerSignal, timeoutController.signal]), cleanup };
+  }
+
+  // Fallback for runtimes without AbortSignal.any.
+  const combined = new AbortController();
+  const onAbort = () => combined.abort(callerSignal.aborted ? callerSignal.reason : timeoutController.signal.reason);
+  if (callerSignal.aborted || timeoutController.signal.aborted) {
+    onAbort();
+  } else {
+    callerSignal.addEventListener('abort', onAbort, { once: true });
+    timeoutController.signal.addEventListener('abort', onAbort, { once: true });
+  }
+  return {
+    signal: combined.signal,
+    cleanup: () => {
+      cleanup();
+      callerSignal.removeEventListener('abort', onAbort);
+      timeoutController.signal.removeEventListener('abort', onAbort);
+    },
+  };
+}
+
 export async function fetchApi<T>(
   endpoint: string,
-  options?: RequestInit
+  options?: FetchApiOptions
 ): Promise<T> {
+  const { timeoutMs, ...init } = options ?? {};
   const headers: Record<string, string> = {
-    ...options?.headers as Record<string, string>,
+    ...init?.headers as Record<string, string>,
   };
 
-  if (options?.body) {
+  if (init?.body) {
     headers['Content-Type'] = 'application/json';
   }
 
@@ -142,24 +254,30 @@ export async function fetchApi<T>(
     headers[CONNECTION_ID_HEADER] = currentConnectionId;
   }
 
-  const response = await fetch(`${API_BASE}${endpoint}`, {
-    ...options,
-    headers,
-    signal: options?.signal,
-  });
+  const { signal, cleanup } = combineSignals(init?.signal, timeoutMs);
 
-  if (!response.ok) {
-    const errorPayload = await parseErrorPayload(response);
+  try {
+    const response = await fetch(`${API_BASE}${endpoint}`, {
+      ...init,
+      headers,
+      signal,
+    });
 
-    if (response.status === 402) {
-      if (isPaymentRequiredPayload(errorPayload)) {
-        throw new PaymentRequiredError(errorPayload);
+    if (!response.ok) {
+      const errorPayload = await parseErrorPayload(response);
+
+      if (response.status === 402) {
+        if (isPaymentRequiredPayload(errorPayload)) {
+          throw new PaymentRequiredError(errorPayload);
+        }
       }
+
+      const errorMessage = getErrorMessageFromPayload(errorPayload);
+      throw new Error(errorMessage || `API error: ${response.status} ${response.statusText}`);
     }
 
-    const errorMessage = getErrorMessageFromPayload(errorPayload);
-    throw new Error(errorMessage || `API error: ${response.status} ${response.statusText}`);
+    return await parseSuccessPayload<T>(response);
+  } finally {
+    cleanup();
   }
-
-  return response.json();
 }
