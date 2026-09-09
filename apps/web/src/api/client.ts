@@ -191,7 +191,8 @@ function combineSignals(callerSignal?: AbortSignal | null, timeoutMs?: number): 
   signal: AbortSignal | undefined;
   cleanup: () => void;
 } {
-  if (!timeoutMs || !Number.isFinite(timeoutMs)) {
+  
+  if (timeoutMs == null || !Number.isFinite(timeoutMs)) {
     return { signal: callerSignal ?? undefined, cleanup: () => {} };
   }
 

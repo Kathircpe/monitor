@@ -121,9 +121,10 @@ describe('fetchApi timeoutMs', () => {
       .spyOn(globalThis, 'fetch')
       .mockImplementation(() => Promise.resolve(jsonResponse('{"ok":true}')));
 
-    await expect(fetchApi('/x', { timeoutMs: 1 })).resolves.toEqual({ ok: true });
-    await expect(fetchApi('/x', { timeoutMs: 999_999_999 })).resolves.toEqual({ ok: true });
-    expect(fetchSpy).toHaveBeenCalledTimes(2);
+    for (const timeoutMs of [1, 0, -50, 999_999_999]) {
+      await expect(fetchApi('/x', { timeoutMs })).resolves.toEqual({ ok: true });
+    }
+    expect(fetchSpy).toHaveBeenCalledTimes(4);
     // A clamped timer was armed: fetch received a live (non-aborted) signal.
     for (const call of fetchSpy.mock.calls) {
       const signal = call[1]?.signal as AbortSignal | undefined;
