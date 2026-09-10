@@ -1404,6 +1404,7 @@ export class PostgresAdapter implements StoragePort {
         delivery_config JSONB,
         alert_config JSONB,
         thresholds JSONB,
+        payload_format VARCHAR(20) DEFAULT 'generic',
         connection_id TEXT NOT NULL DEFAULT 'env-default',
         created_at TIMESTAMPTZ DEFAULT NOW(),
         updated_at TIMESTAMPTZ DEFAULT NOW()
@@ -1413,6 +1414,7 @@ export class PostgresAdapter implements StoragePort {
       ALTER TABLE webhooks ADD COLUMN IF NOT EXISTS delivery_config JSONB;
       ALTER TABLE webhooks ADD COLUMN IF NOT EXISTS alert_config JSONB;
       ALTER TABLE webhooks ADD COLUMN IF NOT EXISTS thresholds JSONB;
+      ALTER TABLE webhooks ADD COLUMN IF NOT EXISTS payload_format VARCHAR(20) DEFAULT 'generic';
 
       CREATE INDEX IF NOT EXISTS idx_webhooks_connection_id ON webhooks(connection_id);
 

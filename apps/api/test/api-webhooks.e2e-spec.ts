@@ -268,6 +268,37 @@ describe('Webhooks API (e2e)', () => {
         .post('/webhooks/non-existent-id/test')
         .expect(404);
     });
+
+    it('should persist payloadFormat and return rendered preview', async () => {
+      const created = await request(app.getHttpServer())
+        .post('/webhooks')
+        .send({
+          name: 'Slack Webhook',
+          url: 'https://example.com/slack',
+          events: [WebhookEventType.INSTANCE_DOWN],
+          payloadFormat: 'slack',
+        })
+        .expect(201);
+
+      expect(created.body.payloadFormat).toBe('slack');
+
+      const res = await request(app.getHttpServer())
+        .post(`/webhooks/${created.body.id}/test`)
+        .expect(200);
+
+      expect(res.body.payloadFormat).toBe('slack');
+      expect(res.body.renderedPayload).toMatchObject({
+        text: expect.any(String),
+        blocks: expect.any(Array),
+      });
+
+      // Unknown delivery retry surfaces an error (not silent success)
+      await request(app.getHttpServer())
+        .post('/webhooks/deliveries/non-existent-id/retry')
+        .expect((r) => expect([400, 404, 500]).toContain(r.status));
+
+      await request(app.getHttpServer()).delete(`/webhooks/${created.body.id}`);
+    });
   });
 
   describe('GET /webhooks/:id/deliveries', () => {

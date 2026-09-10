@@ -89,6 +89,34 @@ Compliance and audit events for regulated environments:
 
 ## Payload Format
 
+Set `payloadFormat` per webhook (`generic` default, `slack`, or `discord`).
+`generic` sends the raw BetterDB event JSON below; `slack` sends Block Kit
+blocks and `discord` sends an embed with the same fields (instance, metric,
+value/baseline, link back to `/anomalies` or `/dashboard` via `FRONTEND_URL`).
+HMAC headers are still sent for all formats; Slack/Discord ignore them.
+
+```json
+// generic (default)
+{ "id": "...", "event": "anomaly.detected", "timestamp": 1706457600000,
+  "instance": { "host": "valkey.example.com", "port": 6379 },
+  "data": { "metricType": "latency", "value": 42, "baseline": 10 } }
+```
+
+```json
+// slack (payloadFormat: "slack") — Block Kit
+{ "text": "BetterDB alert: anomaly.detected",
+  "blocks": [{ "type": "section", "text": { "type": "mrkdwn", "text": "*...*" } }] }
+```
+
+```json
+// discord (payloadFormat: "discord") — embed
+{ "content": "BetterDB alert: anomaly.detected",
+  "embeds": [{ "title": "...", "fields": [{ "name": "Instance", "value": "..." }] }] }
+```
+
+Use `POST /webhooks/:id/test` to preview: the response includes
+`payloadFormat` and the exact `renderedPayload` that would be sent.
+
 All webhooks send JSON payloads with this structure:
 
 ```json
@@ -562,6 +590,7 @@ Override default alert thresholds per webhook. This enables different notificati
 {
   "name": "Early Warning - Slack",
   "url": "https://hooks.slack.com/services/...",
+  "payloadFormat": "slack",
   "events": ["memory.critical", "connection.critical"],
   "thresholds": {
     "memoryCriticalPercent": 75,

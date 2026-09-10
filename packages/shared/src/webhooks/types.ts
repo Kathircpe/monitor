@@ -243,9 +243,18 @@ export interface Webhook {
   deliveryConfig?: WebhookDeliveryConfig;
   alertConfig?: WebhookAlertConfig;
   thresholds?: WebhookThresholds;
+  /** Payload rendering format. Defaults to 'generic' for backward compat. */
+  payloadFormat?: WebhookPayloadFormat;
   connectionId?: string;
   createdAt: number;
   updatedAt: number;
+}
+
+/** Payload rendering format for webhook deliveries. */
+export enum WebhookPayloadFormat {
+  GENERIC = 'generic',
+  SLACK = 'slack',
+  DISCORD = 'discord',
 }
 
 export interface WebhookDelivery {
