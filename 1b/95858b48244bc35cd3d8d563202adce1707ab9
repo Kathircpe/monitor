@@ -1,0 +1,55 @@
+apps/web/src/keybindings/bindings.ts
+  s_993cd7cec5f93c::t_e08d1487816b82 73
+apps/api/src/fleet/__tests__/fleet.controller.spec.ts
+  s_993cd7cec5f93c::t_f3ec673ce41717 1-13
+apps/web/src/components/layout/AppSidebar.tsx
+  s_993cd7cec5f93c::t_4001ee15d1e38c 54-56
+apps/web/src/components/NoConnectionsGuard.tsx
+  s_993cd7cec5f93c::t_6bb50ef9752de3 21-25
+apps/api/src/fleet/__tests__/fleet.service.spec.ts
+  s_993cd7cec5f93c::t_2492d020113e67 1-136
+apps/api/src/fleet/fleet.service.ts
+  s_993cd7cec5f93c::t_d7f0ed7a6bf0ee 1-212
+packages/shared/src/index.ts
+  s_993cd7cec5f93c::t_f6f6682da86a8d 10
+apps/web/src/pages/Fleet.tsx
+  s_993cd7cec5f93c::t_7cf19d0245488f 22
+  s_993cd7cec5f93c::t_58f3a2436c13cb 1-21,23-68,70-102,104,106-284
+  s_993cd7cec5f93c::t_bed700e405239b 103,105
+  s_993cd7cec5f93c::t_076e3252756bba 69
+packages/shared/src/types/fleet.ts
+  s_993cd7cec5f93c::t_4b18f3a7789541 1-40
+apps/api/src/fleet/fleet.module.ts
+  s_993cd7cec5f93c::t_5cf9c30f39d465 1-13
+apps/api/src/app.module.ts
+  s_993cd7cec5f93c::t_2ce99c9d9478b2 6
+  s_993cd7cec5f93c::t_4871918090d9c6 170
+apps/web/src/components/layout/AppLayout.tsx
+  s_993cd7cec5f93c::t_ea48141cd4f941 14
+  s_993cd7cec5f93c::t_1ce0f5f1d3de8e 131-135
+  s_993cd7cec5f93c::t_6a2e590b0ea448 128-130
+apps/api/src/fleet/dto/fleet.dto.ts
+  s_993cd7cec5f93c::t_50102f21badfea 1-62
+apps/web/src/api/fleet.ts
+  s_993cd7cec5f93c::t_235170b40554d0 1-7
+docs/fleet.md
+  s_993cd7cec5f93c::t_d753e879c24d63 1-26
+apps/api/src/fleet/fleet.controller.ts
+  s_993cd7cec5f93c::t_2bcf194c57e703 1-27
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.2",
+  "base_commit_sha": "1b95858b48244bc35cd3d8d563202adce1707ab9",
+  "prompts": {},
+  "sessions": {
+    "s_993cd7cec5f93c": {
+      "agent_id": {
+        "tool": "opencode",
+        "id": "ses_f7557bd8effeHCjhlpNbvNZrV2",
+        "model": "muse-spark-1.3-contributor-free"
+      },
+      "human_author": "Kathir Eswaran <kathircp007@gmail.com>"
+    }
+  }
+}
