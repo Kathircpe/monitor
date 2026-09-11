@@ -1,0 +1,36 @@
+packages/shared/src/webhooks/types.ts
+  s_fa1db72a8e9237::t_638b6b437f60a0 260-271
+apps/web/src/components/webhooks/WebhookForm.tsx
+  s_fa1db72a8e9237::t_be4e946f23fa69 7
+  s_fa1db72a8e9237::t_17e9e19ef50e2b 229-231,263,265,269,271
+apps/api/test/api-webhooks.e2e-spec.ts
+  s_fa1db72a8e9237::t_ea4ea500f9e749 295-300,303
+apps/api/src/webhooks/webhook-dispatcher.service.ts
+  s_fa1db72a8e9237::t_07480446174240 76
+apps/api/src/webhooks/webhook-processor.service.ts
+  s_fa1db72a8e9237::t_5278e63407149c 1,211
+docs/configuration.md
+  s_fa1db72a8e9237::t_0c15d1a4bc1c58 241-246
+.env.example
+  s_fa1db72a8e9237::t_bf69102b15de35 123-128
+docs/webhooks.md
+  s_fa1db72a8e9237::t_1a7bd1d6d51154 95,98-106,114-116,119-155,160-177
+apps/api/src/config/env.schema.ts
+  s_fa1db72a8e9237::t_73778c8b30b2ec 132-135
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.4",
+  "base_commit_sha": "7408c1b1e3cdf523bce6e84bb0949fbb4da55dfe",
+  "prompts": {},
+  "sessions": {
+    "s_fa1db72a8e9237": {
+      "agent_id": {
+        "tool": "opencode",
+        "id": "ses_f762667cdffe6AUmisHS4y7Z3l",
+        "model": "muse-spark-1.3-contributor-free"
+      },
+      "human_author": "Kathir Eswaran <kathircp007@gmail.com>"
+    }
+  }
+}
