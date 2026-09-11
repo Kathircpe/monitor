@@ -35,7 +35,8 @@ interface FetchApiOptions extends RequestInit {
   /**
    * Opt-in timeout in ms, combined with any caller-provided `signal`.
    * Must fall within [MIN_API_TIMEOUT_MS, MAX_API_TIMEOUT_MS];
-   * out-of-range values are clamped to the nearest bound.
+   * out-of-range values are clamped to the nearest bound
+   * (0 is clamped to MIN_API_TIMEOUT_MS — omit the option to disable).
    * When omitted, no timeout is applied (pre-existing behaviour:
    * the request lives until it settles or the caller aborts).
    */
@@ -154,21 +155,21 @@ async function parseErrorPayload(response: Response): Promise<unknown> {
 
 async function parseSuccessPayload<T>(response: Response): Promise<T> {
   if (response.status === 204 || response.status === 205) {
-    return null as T;
+    return undefined as T;
   }
 
   let rawBody: string | null;
   try {
     rawBody = await readBodyText(response);
   } catch (error) {
-    // eslint-disable-next-line preserve-caught-error
     throw new Error(
       `Failed to read response body for ${response.url || 'request'}: ${error instanceof Error ? error.message : String(error)}`,
+      { cause: error },
     );
   }
 
   if (!rawBody) {
-    return null as T;
+    return undefined as T;
   }
 
   const contentType = response.headers.get('content-type') ?? '';
@@ -191,7 +192,6 @@ function combineSignals(callerSignal?: AbortSignal | null, timeoutMs?: number): 
   signal: AbortSignal | undefined;
   cleanup: () => void;
 } {
-  
   if (timeoutMs == null || !Number.isFinite(timeoutMs)) {
     return { signal: callerSignal ?? undefined, cleanup: () => {} };
   }

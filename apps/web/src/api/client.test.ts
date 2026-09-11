@@ -102,34 +102,72 @@ describe('fetchApi timeoutMs', () => {
   }, 5000);
 
   it('aborts a hung request with TimeoutError when timeoutMs is provided', async () => {
-    vi.spyOn(globalThis, 'fetch').mockImplementation(
-      (_url, init) =>
-        new Promise((_resolve, reject) => {
-          init?.signal?.addEventListener('abort', () =>
-            reject((init.signal as AbortSignal).reason ?? new Error('aborted')),
-          );
-        }),
+    vi.useFakeTimers();
+    try {
+      vi.spyOn(globalThis, 'fetch').mockImplementation(
+        (_url, init) =>
+          new Promise((_resolve, reject) => {
+            init?.signal?.addEventListener('abort', () =>
+              reject((init.signal as AbortSignal).reason ?? new Error('aborted')),
+            );
+          }),
+      );
+
+      const assertion = expect(fetchApi('/hung', { timeoutMs: 1000 })).rejects.toMatchObject({
+        name: 'TimeoutError',
+      });
+      await vi.advanceTimersByTimeAsync(1000);
+      await assertion;
+    } finally {
+      vi.useRealTimers();
+    }
+  });
+
+  it.each([
+    { timeoutMs: 1, firesAtMs: 1000 },
+    { timeoutMs: 0, firesAtMs: 1000 },
+    { timeoutMs: -50, firesAtMs: 1000 },
+    { timeoutMs: 999_999_999, firesAtMs: 120_000 },
+  ])('clamps timeoutMs=$timeoutMs to a $firesAtMs ms abort', async ({ timeoutMs, firesAtMs }) => {
+    vi.useFakeTimers();
+    try {
+      vi.spyOn(globalThis, 'fetch').mockImplementation(
+        (_url, init) =>
+          new Promise((_resolve, reject) => {
+            init?.signal?.addEventListener('abort', () =>
+              reject((init.signal as AbortSignal).reason ?? new Error('aborted')),
+            );
+          }),
+      );
+
+      let settled: unknown = 'pending';
+      const pending = fetchApi('/x', { timeoutMs }).then(
+        () => {
+          settled = 'resolved';
+        },
+        (error) => {
+          settled = error;
+        },
+      );
+      await vi.advanceTimersByTimeAsync(firesAtMs - 1);
+      expect(settled).toBe('pending');
+      await vi.advanceTimersByTimeAsync(1);
+      await pending;
+      expect(settled).toMatchObject({ name: 'TimeoutError' });
+    } finally {
+      vi.useRealTimers();
+    }
+  });
+
+  it.each([204, 205])('resolves undefined for empty %i responses', async (status) => {
+    vi.spyOn(globalThis, 'fetch').mockResolvedValue(new Response(null, { status }));
+    await expect(fetchApi('/x')).resolves.toBeUndefined();
+  });
+
+  it('resolves undefined for empty 200 responses', async () => {
+    vi.spyOn(globalThis, 'fetch').mockResolvedValue(
+      new Response('', { status: 200, headers: { 'Content-Type': 'application/json' } }),
     );
-
-    await expect(fetchApi('/hung', { timeoutMs: 1000 })).rejects.toMatchObject({
-      name: 'TimeoutError',
-    });
-  }, 8000);
-
-  it('clamps out-of-range timeoutMs instead of rejecting', async () => {
-    const fetchSpy = vi
-      .spyOn(globalThis, 'fetch')
-      .mockImplementation(() => Promise.resolve(jsonResponse('{"ok":true}')));
-
-    for (const timeoutMs of [1, 0, -50, 999_999_999]) {
-      await expect(fetchApi('/x', { timeoutMs })).resolves.toEqual({ ok: true });
-    }
-    expect(fetchSpy).toHaveBeenCalledTimes(4);
-    // A clamped timer was armed: fetch received a live (non-aborted) signal.
-    for (const call of fetchSpy.mock.calls) {
-      const signal = call[1]?.signal as AbortSignal | undefined;
-      expect(signal).toBeInstanceOf(AbortSignal);
-      expect(signal?.aborted).toBe(false);
-    }
+    await expect(fetchApi('/x')).resolves.toBeUndefined();
   });
 });
