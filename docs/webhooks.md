@@ -92,8 +92,17 @@ Compliance and audit events for regulated environments:
 Set `payloadFormat` per webhook (`generic` default, `slack`, or `discord`).
 `generic` sends the raw BetterDB event JSON below; `slack` sends Block Kit
 blocks and `discord` sends an embed with the same fields (instance, metric,
-value/baseline, link back to `/anomalies` or `/dashboard` via `FRONTEND_URL`).
+value/baseline, link back to `/anomalies` or `/dashboard`).
 HMAC headers are still sent for all formats; Slack/Discord ignore them.
+
+Getting the webhook URL: Slack — create an app and enable an **Incoming
+Webhook** in its configuration; Discord — **Channel Settings → Integrations
+→ Webhooks → New Webhook**. In the BetterDB form, pick the matching payload
+format (it is auto-suggested from the URL).
+
+The "View in BetterDB" button (Slack) / embed link (Discord) points at your
+`FRONTEND_URL` (e.g. `https://monitor.example.com`). When `FRONTEND_URL` is
+unset, messages render without the link — everything else is unchanged.
 
 ```json
 // generic (default)
@@ -102,16 +111,70 @@ HMAC headers are still sent for all formats; Slack/Discord ignore them.
   "data": { "metricType": "latency", "value": 42, "baseline": 10 } }
 ```
 
+A `memory.critical` event renders exactly as follows
+(`FRONTEND_URL=https://monitor.example.com`):
+
 ```json
 // slack (payloadFormat: "slack") — Block Kit
-{ "text": "BetterDB alert: anomaly.detected",
-  "blocks": [{ "type": "section", "text": { "type": "mrkdwn", "text": "*...*" } }] }
+{
+  "text": "Memory usage critical: 92.5% (threshold: 90%)",
+  "blocks": [
+    {
+      "type": "section",
+      "text": {
+        "type": "mrkdwn",
+        "text": "*Memory usage critical: 92.5% (threshold: 90%)*"
+      }
+    },
+    {
+      "type": "section",
+      "fields": [
+        { "type": "mrkdwn", "text": "*Event:*\nmemory.critical" },
+        { "type": "mrkdwn", "text": "*Instance:*\nvalkey.example.com:6379" },
+        { "type": "mrkdwn", "text": "*Metric:*\nmemory_used_percent" },
+        { "type": "mrkdwn", "text": "*Value / baseline:*\n92.5 / 90" }
+      ]
+    },
+    {
+      "type": "context",
+      "elements": [
+        { "type": "mrkdwn", "text": "<!date^1706457600^{date_short} {time}|alert time>" }
+      ]
+    },
+    {
+      "type": "actions",
+      "elements": [
+        {
+          "type": "button",
+          "text": { "type": "plain_text", "text": "View in BetterDB" },
+          "url": "https://monitor.example.com/dashboard"
+        }
+      ]
+    }
+  ]
+}
 ```
 
 ```json
 // discord (payloadFormat: "discord") — embed
-{ "content": "BetterDB alert: anomaly.detected",
-  "embeds": [{ "title": "...", "fields": [{ "name": "Instance", "value": "..." }] }] }
+{
+  "content": "Memory usage critical: 92.5% (threshold: 90%)",
+  "embeds": [
+    {
+      "title": "Memory usage critical: 92.5% (threshold: 90%)",
+      "color": 4088797,
+      "fields": [
+        { "name": "Event", "value": "memory.critical", "inline": true },
+        { "name": "Instance", "value": "valkey.example.com:6379", "inline": true },
+        { "name": "Metric", "value": "memory_used_percent", "inline": true },
+        { "name": "Value / baseline", "value": "92.5 / 90", "inline": true }
+      ],
+      "timestamp": "2024-01-28T16:00:00.000Z",
+      "url": "https://monitor.example.com/dashboard",
+      "footer": { "text": "BetterDB Monitor" }
+    }
+  ]
+}
 ```
 
 Use `POST /webhooks/:id/test` to preview: the response includes

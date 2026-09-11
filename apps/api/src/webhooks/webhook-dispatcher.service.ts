@@ -73,7 +73,7 @@ export class WebhookDispatcherService {
     ttl: this.ALERT_STATE_CACHE_TTL_MS,
   });
 
-    // Instance context
+  // Instance context
   private readonly sourceHost: string;
   private readonly sourcePort: number;
   private readonly appBaseUrl?: string;

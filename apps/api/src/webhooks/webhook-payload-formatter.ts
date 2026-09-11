@@ -115,12 +115,3 @@ function dashboardLink(payload: WebhookPayload, appBaseUrl?: string): string | u
   const path = payload.event === 'anomaly.detected' ? '/anomalies' : '/dashboard';
   return `${base}${path}`;
 }
-
-/** Guess format from URL for the UI auto-suggest hint. */
-export function suggestFormatForUrl(url: string): WebhookPayloadFormat | undefined {
-  if (url.includes('hooks.slack.com')) return WebhookPayloadFormat.SLACK;
-  if (url.includes('discord.com/api/webhooks') || url.includes('discordapp.com/api/webhooks')) {
-    return WebhookPayloadFormat.DISCORD;
-  }
-  return undefined;
-}

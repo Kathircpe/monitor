@@ -292,12 +292,15 @@ describe('Webhooks API (e2e)', () => {
         blocks: expect.any(Array),
       });
 
-      // Unknown delivery retry surfaces an error (not silent success)
+      await request(app.getHttpServer()).delete(`/webhooks/${created.body.id}`);
+    });
+  });
+
+  describe('POST /webhooks/deliveries/:deliveryId/retry', () => {
+    it('should return 404 for unknown delivery', async () => {
       await request(app.getHttpServer())
         .post('/webhooks/deliveries/non-existent-id/retry')
-        .expect((r) => expect([400, 404, 500]).toContain(r.status));
-
-      await request(app.getHttpServer()).delete(`/webhooks/${created.body.id}`);
+        .expect(404);
     });
   });
 

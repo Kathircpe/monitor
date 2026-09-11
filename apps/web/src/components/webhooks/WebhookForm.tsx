@@ -4,6 +4,7 @@ import {
   Tier,
   getEventsByTierCategory,
   isEventAllowedForTier,
+  suggestPayloadFormatForUrl,
   WebhookEventType as WebhookEventTypeEnum,
   WebhookPayloadFormat,
 } from '@betterdb/shared';
@@ -23,14 +24,6 @@ const THRESHOLD_EVENTS: WebhookEventType[] = [
 
 function hasThresholdEvents(events?: WebhookEventType[]): boolean {
   return events?.some(e => THRESHOLD_EVENTS.includes(e)) ?? false;
-}
-
-function suggestFormat(url: string): WebhookPayloadFormat | undefined {
-  if (url.includes('hooks.slack.com')) return WebhookPayloadFormat.SLACK;
-  if (url.includes('discord.com/api/webhooks') || url.includes('discordapp.com/api/webhooks')) {
-    return WebhookPayloadFormat.DISCORD;
-  }
-  return undefined;
 }
 
 const FORMAT_PLACEHOLDERS: Record<WebhookPayloadFormat, string> = {
@@ -233,6 +226,9 @@ export function WebhookForm({ webhook, onSubmit, onCancel }: WebhookFormProps) {
     });
   };
 
+  const suggestedFormat = formData.url ? suggestPayloadFormatForUrl(formData.url) : undefined;
+  const showFormatHint = !!suggestedFormat && suggestedFormat !== formData.payloadFormat;
+
   return (
     <form onSubmit={handleSubmit}>
       <Card className="p-6">
@@ -264,15 +260,15 @@ export function WebhookForm({ webhook, onSubmit, onCancel }: WebhookFormProps) {
               className="w-full px-3 py-2 border rounded-md"
               placeholder={FORMAT_PLACEHOLDERS[formData.payloadFormat ?? WebhookPayloadFormat.GENERIC]}
             />
-            {formData.url && suggestFormat(formData.url) && suggestFormat(formData.url) !== formData.payloadFormat && (
+            {showFormatHint && (
               <p className="text-xs text-primary mt-1">
-                This looks like a {suggestFormat(formData.url)} URL.{' '}
+                This looks like a {suggestedFormat} URL.{' '}
                 <button
                   type="button"
                   className="underline"
-                  onClick={() => setFormData({ ...formData, payloadFormat: suggestFormat(formData.url) })}
+                  onClick={() => setFormData({ ...formData, payloadFormat: suggestedFormat })}
                 >
-                  Use {suggestFormat(formData.url)} format
+                  Use {suggestedFormat} format
                 </button>
               </p>
             )}

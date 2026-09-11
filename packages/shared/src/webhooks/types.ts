@@ -257,6 +257,18 @@ export enum WebhookPayloadFormat {
   DISCORD = 'discord',
 }
 
+/**
+ * Guess the intended payload format from a webhook URL, for UI auto-suggest.
+ * Returns undefined when the URL doesn't match a known chat endpoint.
+ */
+export function suggestPayloadFormatForUrl(url: string): WebhookPayloadFormat | undefined {
+  if (url.includes('hooks.slack.com')) return WebhookPayloadFormat.SLACK;
+  if (url.includes('discord.com/api/webhooks') || url.includes('discordapp.com/api/webhooks')) {
+    return WebhookPayloadFormat.DISCORD;
+  }
+  return undefined;
+}
+
 export interface WebhookDelivery {
   id: string;
   webhookId: string;
