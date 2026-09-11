@@ -65,6 +65,40 @@ describe('fetchApi error handling', () => {
 
     await expect(fetchApi('/license/activate')).rejects.toThrow('API error: 400 Bad Request');
   });
+
+  it('resolves undefined for 204 No Content responses (e.g. webhook delete)', async () => {
+    vi.spyOn(globalThis, 'fetch').mockResolvedValue(
+      new Response(null, {
+        status: 204,
+        statusText: 'No Content',
+      }),
+    );
+
+    await expect(fetchApi<void>('/webhooks/123', { method: 'DELETE' })).resolves.toBeUndefined();
+  });
+
+  it('resolves undefined for 200 responses with an empty body', async () => {
+    vi.spyOn(globalThis, 'fetch').mockResolvedValue(
+      new Response('', {
+        status: 200,
+        statusText: 'OK',
+      }),
+    );
+
+    await expect(fetchApi<void>('/webhooks/123', { method: 'DELETE' })).resolves.toBeUndefined();
+  });
+
+  it('still parses JSON bodies for successful responses', async () => {
+    vi.spyOn(globalThis, 'fetch').mockResolvedValue(
+      new Response(JSON.stringify({ id: '123' }), {
+        status: 200,
+        statusText: 'OK',
+        headers: { 'Content-Type': 'application/json' },
+      }),
+    );
+
+    await expect(fetchApi<{ id: string }>('/webhooks/123')).resolves.toEqual({ id: '123' });
+  });
 });
 
 describe('fetchApi timeoutMs', () => {
