@@ -161,5 +161,14 @@ export async function fetchApi<T>(
     throw new Error(errorMessage || `API error: ${response.status} ${response.statusText}`);
   }
 
-  return response.json();
+  if (response.status === 204 || response.status === 205) {
+    return undefined as T;
+  }
+
+  const text = await response.text();
+  if (!text) {
+    return undefined as T;
+  }
+
+  return JSON.parse(text);
 }
