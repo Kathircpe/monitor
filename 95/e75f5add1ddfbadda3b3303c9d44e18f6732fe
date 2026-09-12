@@ -1,0 +1,123 @@
+packages/cli/package.json
+  s_ab3798da8bff0f::t_61c7b9adcc8b09 21
+apps/web/package.json
+  s_ab3798da8bff0f::t_62c4d64f1fd7f2 11
+packages/semantic-cache/eslint.config.mjs
+  s_cc54f41c2419f4::t_bc7ab7af77f352 1-2
+proprietary/eslint.config.mjs
+  s_ab3798da8bff0f::t_38b073800ddef0 1-31,33-36,38-46
+  s_ab3798da8bff0f::t_7c8ecd7758a52b 32
+  s_ab3798da8bff0f::t_e178f9c410d078 37
+packages/agent/package.json
+  s_ab3798da8bff0f::t_f836575d0a368c 15
+proprietary/entitlement/package.json
+  s_ab3798da8bff0f::t_678e0a880e2460 8
+packages/agent-cache/eslint.config.mjs
+  s_cc54f41c2419f4::t_56a1ac436ced75 1-2
+turbo.json
+  s_ab3798da8bff0f::t_a2cdc2cc4af75c 17-27
+  s_ab3798da8bff0f::t_b1692870caeebf 15-16
+.github/workflows/api-tests.yml
+  s_ab3798da8bff0f::t_dab4ff5d1a2999 81-82,155-156,205-206,245-246
+packages/agent-memory/package.json
+  s_ab3798da8bff0f::t_af02f0f763829e 33
+.prettierignore
+  s_cc54f41c2419f4::t_bd7c56bf5aef15 15
+  s_cc54f41c2419f4::t_a04f62d5735da5 28-29
+  s_ab3798da8bff0f::t_2be130b72fd219 27
+  s_cc54f41c2419f4::t_e9f5cb376f9fb2 1-6,9-14,31
+  s_ab3798da8bff0f::t_d4b1daf602507d 33
+  s_ab3798da8bff0f::t_1887a2bb0ccdb8 32,34-40
+  s_cc54f41c2419f4::t_73bc159c5cceb2 7-8,16-19,21-26,30
+  s_ab3798da8bff0f::t_448dc1ff3e5f6d 20
+packages/agent/eslint.config.mjs
+  s_cc54f41c2419f4::t_31141dd5571876 1-2
+apps/api/eslint.config.mjs
+  s_ab3798da8bff0f::t_4fcbc459f13f5f 34
+  s_ab3798da8bff0f::t_b61d9b40e3aae3 35-40
+  s_ab3798da8bff0f::t_aae28a39be06fb 29
+packages/agent-memory/eslint.config.mjs
+  s_cc54f41c2419f4::t_98f10e5fda9168 1-2
+packages/valkey-search-kit/eslint.config.mjs
+  s_cc54f41c2419f4::t_4023305c45e70b 1-2
+packages/semantic-cache/package.json
+  s_ab3798da8bff0f::t_675204ae639398 103
+packages/mcp/eslint.config.mjs
+  s_cc54f41c2419f4::t_c4ddb8d6d2dced 1-2
+packages/agent-cache/package.json
+  s_ab3798da8bff0f::t_1e211b0a861606 72
+packages/mcp/package.json
+  s_ab3798da8bff0f::t_81ed772e7ddeaa 33
+packages/cli/eslint.config.mjs
+  s_cc54f41c2419f4::t_cbca1ad8f03fcf 1-2
+.github/actions/setup-node-pnpm/action.yml
+  s_cc54f41c2419f4::t_850e982316abbd 1-20
+eslint.base.mjs
+  s_cc54f41c2419f4::t_019d52ab8447e1 1-18,20-23,33-35
+  s_ab3798da8bff0f::t_906380f5ec2551 25-26
+  s_ab3798da8bff0f::t_264251152eb3d8 27-32
+  s_ab3798da8bff0f::t_6d1f7de4da6fa6 24
+  s_ab3798da8bff0f::t_cae60f1da92f3c 19
+packages/shared/package.json
+  s_ab3798da8bff0f::t_94fa7afbfb5667 26
+.github/workflows/lint.yml
+  s_ab3798da8bff0f::t_821629dac9a57d 39-40,44-46,49,53-69
+  s_ab3798da8bff0f::t_f7e8ab1a794dfa 23-24
+  s_cc54f41c2419f4::t_b2bc5a41462945 4-9,13-20,26,31-32,35-38
+  s_cc54f41c2419f4::t_3f98666184f64f 1-3,10-12,21-22,25,27-30,33-34
+  s_ab3798da8bff0f::t_615281df028e64 41-43,47-48,50-52,70-77
+packages/cache-benchmark-ts/eslint.config.mjs
+  s_cc54f41c2419f4::t_f5eb1f810da343 1-2
+apps/web/eslint.config.mjs
+  s_ab3798da8bff0f::t_971f0516dcebf8 33
+  s_ab3798da8bff0f::t_228ab869a7b653 34
+  s_ab3798da8bff0f::t_a8811658d2c05d 35-40
+package.json
+  s_cc54f41c2419f4::t_195d14ccafb819 49
+  s_cc54f41c2419f4::t_0568667a9254ca 56,59,62-63
+  s_cc54f41c2419f4::t_8c240e58ad02b5 50
+  s_ab3798da8bff0f::t_d6417f85df0e6b 47-48
+packages/retrieval/eslint.config.mjs
+  s_cc54f41c2419f4::t_83b9db9b3dcd06 1-2
+packages/ai/eslint.config.mjs
+  s_cc54f41c2419f4::t_f7aa803983937c 1-2
+packages/retrieval/package.json
+  s_ab3798da8bff0f::t_a27b84d0b1e85f 32
+packages/valkey-search-kit/package.json
+  s_ab3798da8bff0f::t_89bf4e99b92cc8 32
+packages/cache-benchmark-ts/package.json
+  s_ab3798da8bff0f::t_2f37d378694391 13
+  s_cc54f41c2419f4::t_6c9450c84ecc52 12
+packages/shared/eslint.config.mjs
+  s_cc54f41c2419f4::t_bc6f8022651c42 1-2
+proprietary/entitlement/eslint.config.mjs
+  s_cc54f41c2419f4::t_6e45ed327f7f03 1-2
+packages/ai/package.json
+  s_ab3798da8bff0f::t_4ebad8ace86a5c 147
+pnpm-lock.yaml
+  s_ab3798da8bff0f::t_5f473fdde0a912 65-67,74-76,86-88,16228,18360
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.4",
+  "base_commit_sha": "95e75f5add1ddfbadda3b3303c9d44e18f6732fe",
+  "prompts": {},
+  "sessions": {
+    "s_ab3798da8bff0f": {
+      "agent_id": {
+        "tool": "opencode",
+        "id": "ses_f6b71745fffeF2lUHB10m9V9cW",
+        "model": "muse-spark-1.3-contributor-free"
+      },
+      "human_author": "Kathir Eswaran <kathircp007@gmail.com>"
+    },
+    "s_cc54f41c2419f4": {
+      "agent_id": {
+        "tool": "opencode",
+        "id": "ses_f6bb42207ffeAfDFjTjn5Y62x7",
+        "model": "muse-spark-1.3-contributor-free"
+      },
+      "human_author": "Kathir Eswaran <kathircp007@gmail.com>"
+    }
+  }
+}
