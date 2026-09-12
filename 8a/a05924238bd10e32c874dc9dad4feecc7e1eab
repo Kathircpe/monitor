@@ -1,0 +1,33 @@
+apps/web/src/api/client.ts
+  s_12bf6d578a1fef::t_0a42163060882e 164
+  s_12bf6d578a1fef::t_be7c1faa803625 190,198
+  h_bf19f0f446d5d8 18,44,194
+  s_12bf6d578a1fef::t_9ed14db8bee647 34-35,41,43,139,141-143,155-159,161,163,165-189,191-193,195-197,199-238,241,243,245,248,257-264,266-267,269-272,274-276,279-281
+  s_12bf6d578a1fef::t_9351c2e6e36022 36-40,42
+  s_12bf6d578a1fef::t_0bee5d59787aef 132,134-138,140,160,162
+  s_12bf6d578a1fef::t_79eab9b200ab8f 13-17
+apps/web/src/api/client.test.ts
+  s_12bf6d578a1fef::t_83873afb9ccccc 69-119,123-134
+  s_12bf6d578a1fef::t_6ce8d821f8ba16 120-122
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.2",
+  "base_commit_sha": "8aa05924238bd10e32c874dc9dad4feecc7e1eab",
+  "prompts": {},
+  "humans": {
+    "h_bf19f0f446d5d8": {
+      "author": "Kathir Eswaran <kathircp007@gmail.com>"
+    }
+  },
+  "sessions": {
+    "s_12bf6d578a1fef": {
+      "agent_id": {
+        "tool": "opencode",
+        "id": "ses_f7aff466cffe8LcP0Vo70v4Qtv",
+        "model": "muse-spark-1.3-contributor-free"
+      },
+      "human_author": "Kathir Eswaran <kathircp007@gmail.com>"
+    }
+  }
+}
