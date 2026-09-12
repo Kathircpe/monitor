@@ -552,6 +552,8 @@ export class WebhookDispatcherService {
     const deliveryConfig = getDeliveryConfig(webhook);
     const timeoutMs = deliveryConfig.timeoutMs;
 
+    let renderedPayload: Record<string, unknown> | undefined;
+
     try {
       // Use first subscribed event for testing, or instance.down as fallback
       const testEventType =
@@ -576,7 +578,7 @@ export class WebhookDispatcherService {
       };
 
       const payloadString = formatWebhookBody(webhook, testPayload, this.appBaseUrl);
-      const renderedPayload = JSON.parse(payloadString) as Record<string, unknown>;
+      renderedPayload = JSON.parse(payloadString) as Record<string, unknown>;
       const timestamp = testPayload.timestamp;
       const signature = this.generateSignatureWithTimestamp(
         payloadString,
@@ -628,6 +630,7 @@ export class WebhookDispatcherService {
         error: error instanceof Error && error.message ? error.message : 'Unknown error',
         durationMs,
         payloadFormat: webhook.payloadFormat ?? WebhookPayloadFormat.GENERIC,
+        renderedPayload,
       };
     }
   }

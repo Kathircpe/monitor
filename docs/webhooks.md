@@ -104,7 +104,7 @@ The "View in BetterDB" button (Slack) / embed link (Discord) points at your
 `FRONTEND_URL` (e.g. `https://monitor.example.com`). When `FRONTEND_URL` is
 unset, messages render without the link — everything else is unchanged.
 
-```json
+```jsonc
 // generic (default)
 { "id": "...", "event": "anomaly.detected", "timestamp": 1706457600000,
   "instance": { "host": "valkey.example.com", "port": 6379 },
@@ -114,7 +114,7 @@ unset, messages render without the link — everything else is unchanged.
 A `memory.critical` event renders exactly as follows
 (`FRONTEND_URL=https://monitor.example.com`):
 
-```json
+```jsonc
 // slack (payloadFormat: "slack") — Block Kit
 {
   "text": "Memory usage critical: 92.5% (threshold: 90%)",
@@ -155,7 +155,7 @@ A `memory.critical` event renders exactly as follows
 }
 ```
 
-```json
+```jsonc
 // discord (payloadFormat: "discord") — embed
 {
   "content": "Memory usage critical: 92.5% (threshold: 90%)",
@@ -178,11 +178,13 @@ A `memory.critical` event renders exactly as follows
 ```
 
 Use `POST /webhooks/:id/test` to preview: the response includes
-`payloadFormat` and the exact `renderedPayload` that would be sent.
+`payloadFormat` and the exact `renderedPayload` that would be sent —
+including on failure, so you can see what a failing Slack/Discord hook
+would have received.
 
 All webhooks send JSON payloads with this structure:
 
-```json
+```jsonc
 {
   "id": "550e8400-e29b-41d4-a716-446655440000",
   "event": "instance.down",

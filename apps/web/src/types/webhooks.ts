@@ -45,6 +45,6 @@ export interface TestWebhookResponse {
   responseBody?: string;
   error?: string;
   durationMs: number;
-  payloadFormat?: string;
+  payloadFormat?: SharedWebhookPayloadFormat;
   renderedPayload?: Record<string, unknown>;
 }
