@@ -1,0 +1,24 @@
+.github/workflows/lint.yml
+  s_cc54f41c2419f4::t_3f98666184f64f 1-40
+.prettierignore
+  s_cc54f41c2419f4::t_a04f62d5735da5 13-15
+  s_cc54f41c2419f4::t_e9f5cb376f9fb2 1-12,16-17
+package.json
+  s_cc54f41c2419f4::t_0381afeed7b57e 48
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.4",
+  "base_commit_sha": "79fb333fbd0bd01dce3610e38f8945a467846769",
+  "prompts": {},
+  "sessions": {
+    "s_cc54f41c2419f4": {
+      "agent_id": {
+        "tool": "opencode",
+        "id": "ses_f6bb42207ffeAfDFjTjn5Y62x7",
+        "model": "muse-spark-1.3-contributor-free"
+      },
+      "human_author": "Kathir Eswaran <kathircp007@gmail.com>"
+    }
+  }
+}
