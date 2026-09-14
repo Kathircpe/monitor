@@ -1,0 +1,19 @@
+docs/fleet.md
+  s_993cd7cec5f93c::t_7a9e0044122624 20-23
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.4",
+  "base_commit_sha": "fc7a0321ad10844afdd1f4464a4a21194af68668",
+  "prompts": {},
+  "sessions": {
+    "s_993cd7cec5f93c": {
+      "agent_id": {
+        "tool": "opencode",
+        "id": "ses_f7557bd8effeHCjhlpNbvNZrV2",
+        "model": "muse-spark-1.3-contributor-free"
+      },
+      "human_author": "Kathir Eswaran <kathircp007@gmail.com>"
+    }
+  }
+}
