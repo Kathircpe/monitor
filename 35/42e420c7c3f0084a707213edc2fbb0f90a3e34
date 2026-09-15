@@ -1,0 +1,21 @@
+apps/api/src/prometheus/prometheus.service.ts
+  s_6a2d8b864b2141::t_0eed5a94f7f12e 703-717
+  s_6a2d8b864b2141::t_1c2f2e7112a5b4 220-224
+  s_6a2d8b864b2141::t_5ab9364dcf03e8 752-784
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.4",
+  "base_commit_sha": "3542e420c7c3f0084a707213edc2fbb0f90a3e34",
+  "prompts": {},
+  "sessions": {
+    "s_6a2d8b864b2141": {
+      "agent_id": {
+        "tool": "opencode",
+        "id": "ses_f5a7fd084ffeuxxYNAtJ0As4Px",
+        "model": "muse-spark-1.3-contributor-free"
+      },
+      "human_author": "Kathir Eswaran <kathircp007@gmail.com>"
+    }
+  }
+}
