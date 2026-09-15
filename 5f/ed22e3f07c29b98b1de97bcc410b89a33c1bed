@@ -1,0 +1,58 @@
+apps/api/src/fleet/fleet.service.ts
+  s_6a2d8b864b2141::t_3937418a28a5b8 224
+docs/prometheus-metrics.md
+  s_6a2d8b864b2141::t_614f05680af53e 309-311
+apps/web/src/components/pages/security/CveAlertBanner.tsx
+  s_6a2d8b864b2141::t_d10a9098205518 2,10-11,17,21-23,31-38
+apps/api/src/prometheus/prometheus.service.ts
+  s_6a2d8b864b2141::t_b1edf704ad68b8 329
+  s_6a2d8b864b2141::t_121cbf3524fc0b 800
+  s_6a2d8b864b2141::t_9cf15cd9be7241 759-765,771-776
+  s_6a2d8b864b2141::t_93d10125d775e0 79-80
+  s_6a2d8b864b2141::t_b81d4d5f1ceb3e 820,2025-2035
+  s_6a2d8b864b2141::t_e59c07336cdd82 769-770,796,799,807-819
+  s_6a2d8b864b2141::t_b04f9147f7aaa8 821-822
+docs/webhooks.md
+  s_6a2d8b864b2141::t_5ba0b954b26e21 236-244
+apps/api/src/cve/__tests__/cve-scan-dispatch.spec.ts
+  s_6a2d8b864b2141::t_d3b85d7598cbbe 245
+  s_6a2d8b864b2141::t_51246cc4b11e93 27-58,75-84,86-92,96-98,109-110,119-152,156,162-168,190,192-193,198-219,223-225,229-238,240-241,243-244,246-252,255,258-263,268,270-279,282-298,301,307,309-314,316-317,320-340
+  s_6a2d8b864b2141::t_328eb3ae385a26 115
+  s_6a2d8b864b2141::t_a383259aff81aa 303-305
+apps/api/src/prometheus/prometheus.cve.spec.ts
+  s_6a2d8b864b2141::t_cd10ebcafdf844 96-99,113-114,123,127,131,134,138
+  s_6a2d8b864b2141::t_81331684f80bbc 136
+  s_6a2d8b864b2141::t_593b4f243731bb 1-77,79-80,84-95,100-112,115-122,124-126,128-130,132-133,135,137,139-140
+  s_6a2d8b864b2141::t_f96028758c0115 78,81-83
+apps/api/src/cve/cve-scan.service.ts
+  s_6a2d8b864b2141::t_7a826e01c45fc7 124-125,128-138,140,143,145-148,151,160-161,163,165-176,179-189,192
+  s_6a2d8b864b2141::t_2967bd0801bc39 559
+  s_6a2d8b864b2141::t_b86a8749ec3aeb 560-567,569,573-582,585-589,592-599,602-610,614-629
+  s_6a2d8b864b2141::t_7891b0cd437c62 583-584,590-591
+  s_6a2d8b864b2141::t_a6e2011c40976a 648-651,656-682,687-701,705-713,718-732,735-736
+  s_6a2d8b864b2141::t_660ff1f636a018 553
+apps/api/src/fleet/__tests__/fleet.service.cve.spec.ts
+  s_6a2d8b864b2141::t_76c14af2c1a863 105-130
+  s_6a2d8b864b2141::t_f58c3798875d0d 86
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.4",
+  "base_commit_sha": "5fed22e3f07c29b98b1de97bcc410b89a33c1bed",
+  "prompts": {},
+  "humans": {
+    "h_bf19f0f446d5d8": {
+      "author": "Kathir Eswaran <kathircp007@gmail.com>"
+    }
+  },
+  "sessions": {
+    "s_6a2d8b864b2141": {
+      "agent_id": {
+        "tool": "opencode",
+        "id": "ses_f5a7fd084ffeuxxYNAtJ0As4Px",
+        "model": "muse-spark-1.3-contributor-free"
+      },
+      "human_author": "Kathir Eswaran <kathircp007@gmail.com>"
+    }
+  }
+}
