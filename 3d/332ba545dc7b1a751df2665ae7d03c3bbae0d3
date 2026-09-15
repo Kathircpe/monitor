@@ -1,0 +1,30 @@
+packages/shared/src/types/fleet.ts
+  s_6a2d8b864b2141::t_ba6756d42441f3 13-20
+  s_6a2d8b864b2141::t_21a9ab7b830f51 40-41
+packages/shared/src/webhooks/types.ts
+  s_6a2d8b864b2141::t_5af3399946870e 603-604
+  s_6a2d8b864b2141::t_ebaf1275989ad3 78
+  s_6a2d8b864b2141::t_fbc72c0aa186a7 26-27
+  s_6a2d8b864b2141::t_74b9fba453b984 120
+  s_6a2d8b864b2141::t_8e2de8836acc7c 128
+  s_6a2d8b864b2141::t_e16018de4813ba 68
+  s_6a2d8b864b2141::t_82fc4185a74260 495-543
+packages/shared/src/types/cve.ts
+  s_6a2d8b864b2141::t_2dbcf66ecff428 140-161
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.4",
+  "base_commit_sha": "3d332ba545dc7b1a751df2665ae7d03c3bbae0d3",
+  "prompts": {},
+  "sessions": {
+    "s_6a2d8b864b2141": {
+      "agent_id": {
+        "tool": "opencode",
+        "id": "ses_f5a7fd084ffeuxxYNAtJ0As4Px",
+        "model": "muse-spark-1.3-contributor-free"
+      },
+      "human_author": "Kathir Eswaran <kathircp007@gmail.com>"
+    }
+  }
+}
