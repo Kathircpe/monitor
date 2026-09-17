@@ -1,0 +1,24 @@
+apps/api/src/system/system-workspace.spec.ts
+  s_b677f648aba55a::t_b970be5d3d0652 45
+apps/api/src/auth/workspace-auth.module.spec.ts
+  s_b677f648aba55a::t_d1da92df53469f 73
+apps/api/src/auth/workspace-config.spec.ts
+  s_b677f648aba55a::t_1d8fa119ea0b7b 66,68-69
+  s_b677f648aba55a::t_273b789c215c53 1
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.4",
+  "base_commit_sha": "3562830972bd9ee938c58934c51bb8d30e46ab90",
+  "prompts": {},
+  "sessions": {
+    "s_b677f648aba55a": {
+      "agent_id": {
+        "tool": "opencode",
+        "id": "ses_f50f0c8a2ffen6rCaX6auzC2aq",
+        "model": "muse-spark-1.3-contributor-free"
+      },
+      "human_author": "Kathir Eswaran <kathircp007@gmail.com>"
+    }
+  }
+}
