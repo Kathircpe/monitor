@@ -1,0 +1,42 @@
+apps/api/src/workspace/member.service.ts
+  s_ecce8f74722d92::t_3a6fdb35a2541b 121-129
+apps/api/src/workspace/workspace.controller.spec.ts
+  s_ecce8f74722d92::t_e22a47bcf65b79 613,619
+  s_ecce8f74722d92::t_74289e91b1b377 662
+apps/api/test/workspace-session-authority.e2e-spec.ts
+  s_ecce8f74722d92::t_3aca80a79cad95 141
+apps/web/src/pages/Members.test.tsx
+  s_ecce8f74722d92::t_4f738d4c3d69d3 45-52
+  s_ecce8f74722d92::t_70b8d6835087e0 166,170,174
+apps/api/src/workspace/member.service.spec.ts
+  s_ecce8f74722d92::t_0f4a9098b9f34e 447
+  s_ecce8f74722d92::t_3bd0b2b55ade98 566
+  s_ecce8f74722d92::t_af319ac55a68d1 621,628,634
+  s_ecce8f74722d92::t_74617ae8696773 438-441
+  s_ecce8f74722d92::t_5e7ba7f1398c2f 551
+  s_ecce8f74722d92::t_dc3373521e92de 656
+  s_ecce8f74722d92::t_ada8f34454348c 528,534
+  s_ecce8f74722d92::t_924624086c49f3 501
+  s_ecce8f74722d92::t_3ad4733b87b42b 334-338,343,348-349
+  s_ecce8f74722d92::t_23fa38334376fb 481-482,489
+  s_ecce8f74722d92::t_62473170cbc3f5 600
+  s_ecce8f74722d92::t_b1866ba1ecfe3a 589
+  s_ecce8f74722d92::t_941841b754bf8a 457-458
+  s_ecce8f74722d92::t_dbf32d59e851e7 350-351
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.4",
+  "base_commit_sha": "340b5e39eae6b6494f90cc3229ff06e5b420d4a5",
+  "prompts": {},
+  "sessions": {
+    "s_ecce8f74722d92": {
+      "agent_id": {
+        "tool": "opencode",
+        "id": "ses_f51802574ffez75wEAsmKlao78",
+        "model": "muse-spark-1.3-contributor-free"
+      },
+      "human_author": "Kathir Eswaran <kathircp007@gmail.com>"
+    }
+  }
+}
