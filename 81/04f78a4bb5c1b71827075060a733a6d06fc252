@@ -1,0 +1,35 @@
+apps/api/src/prometheus/prometheus.cve.spec.ts
+  s_975165848bbaf5::t_3f2ffa6e23a107 135-140,146,151
+apps/api/src/prometheus/prometheus.service.ts
+  s_975165848bbaf5::t_5e9db284df00b4 95-96
+  s_975165848bbaf5::t_d90fdf65c0a642 336
+  s_975165848bbaf5::t_3ce57a16afd1f5 767,776,785-791,793
+  s_975165848bbaf5::t_ac6d1fb16371df 83
+apps/api/src/webhooks/webhook-dispatcher.service.ts
+  s_975165848bbaf5::t_fb75195736d168 107-109
+  s_975165848bbaf5::t_9647968e7599ab 147-150
+apps/api/src/cve/cve-scan.service.ts
+  s_975165848bbaf5::t_ad1990c7f8aa93 613-615
+  s_975165848bbaf5::t_e08dd34472e139 136,140,142,146-148
+  s_975165848bbaf5::t_b888324959522f 156
+  s_975165848bbaf5::t_d1d382fad8b706 185-187
+  s_975165848bbaf5::t_6b6273fa65584c 165-166
+docs/webhooks.md
+  s_975165848bbaf5::t_2044d40c903d00 243-245
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.4",
+  "base_commit_sha": "8104f78a4bb5c1b71827075060a733a6d06fc252",
+  "prompts": {},
+  "sessions": {
+    "s_975165848bbaf5": {
+      "agent_id": {
+        "tool": "opencode",
+        "id": "ses_f555df7d5ffemWg7V8LoENIW0u",
+        "model": "muse-spark-1.3-contributor-free"
+      },
+      "human_author": "Kathir Eswaran <kathircp007@gmail.com>"
+    }
+  }
+}
