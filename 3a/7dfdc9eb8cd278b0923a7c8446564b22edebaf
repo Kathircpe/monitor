@@ -1,0 +1,30 @@
+proprietary/entitlement/src/auth/__tests__/broker-signing.service.spec.ts
+  s_b677f648aba55a::t_1b864f254394b5 200-202,206,209,215
+  s_b677f648aba55a::t_ca6e2fe947668e 235
+  s_b677f648aba55a::t_1055aef3380bd2 34-41,46-47,59
+proprietary/entitlement/src/auth/__tests__/broker-token.controller.spec.ts
+  s_b677f648aba55a::t_275b6155dec29a 162-169
+  s_b677f648aba55a::t_8b352406e1b540 8,19,25-30
+  s_b677f648aba55a::t_619edbf73a4489 31
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.4",
+  "base_commit_sha": "3a7dfdc9eb8cd278b0923a7c8446564b22edebaf",
+  "prompts": {},
+  "humans": {
+    "h_bf19f0f446d5d8": {
+      "author": "Kathir Eswaran <kathircp007@gmail.com>"
+    }
+  },
+  "sessions": {
+    "s_b677f648aba55a": {
+      "agent_id": {
+        "tool": "opencode",
+        "id": "ses_f50f0c8a2ffen6rCaX6auzC2aq",
+        "model": "muse-spark-1.3-contributor-free"
+      },
+      "human_author": "Kathir Eswaran <kathircp007@gmail.com>"
+    }
+  }
+}
