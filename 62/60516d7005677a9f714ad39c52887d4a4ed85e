@@ -1,0 +1,34 @@
+apps/web/src/components/ConnectionSelector.tsx
+  s_1f87ff68a1bfae::t_8408ee6cbc925d 1110
+apps/web/src/components/pages/settings/McpTokensPanel.test.tsx
+  s_cd7c1c2a57f958::t_9dfda7ce65db02 147-171
+  s_cd7c1c2a57f958::t_17b1401f1fdea3 49-53
+apps/web/src/components/pages/settings/McpTokensPanel.tsx
+  s_1f87ff68a1bfae::t_edf5ee64951adc 93,95-96
+  s_1f87ff68a1bfae::t_943901ffd1629e 262
+  s_cd7c1c2a57f958::t_2bc2d76a180a39 92,94,97
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.4",
+  "base_commit_sha": "6260516d7005677a9f714ad39c52887d4a4ed85e",
+  "prompts": {},
+  "sessions": {
+    "s_1f87ff68a1bfae": {
+      "agent_id": {
+        "tool": "opencode",
+        "id": "ses_f4b399c2affe3oiLTIonxau6vm",
+        "model": "muse-spark-1.3-contributor-free"
+      },
+      "human_author": "Kathir Eswaran <kathircp007@gmail.com>"
+    },
+    "s_cd7c1c2a57f958": {
+      "agent_id": {
+        "tool": "opencode",
+        "id": "ses_f4be7fcbcffeVNsE2V6SIsQp83",
+        "model": "muse-spark-1.3-contributor-free"
+      },
+      "human_author": null
+    }
+  }
+}
