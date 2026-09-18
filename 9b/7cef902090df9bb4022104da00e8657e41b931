@@ -1,0 +1,34 @@
+apps/web/src/components/pages/security/CveAlertBanner.tsx
+  s_6a2d8b864b2141::t_f9eae135b52b23 1-80
+apps/web/src/components/webhooks/WebhookForm.tsx
+  s_6a2d8b864b2141::t_728cb8abc2b4d0 83-84
+apps/web/src/pages/Security.tsx
+  s_6a2d8b864b2141::t_4f155913b90096 184
+  s_6a2d8b864b2141::t_4a3d9806f261ae 3
+apps/web/src/components/pages/security/CveAlertBanner.test.tsx
+  s_6a2d8b864b2141::t_ab7209e003ebc8 1-51
+apps/web/src/pages/Fleet.tsx
+  s_6a2d8b864b2141::t_e65b42b467e5e5 180
+  s_6a2d8b864b2141::t_698b3b21e6a3ac 248-272
+  s_6a2d8b864b2141::t_0c00f5a3ee9954 85-89
+  s_6a2d8b864b2141::t_8e92247abb3151 20
+  s_6a2d8b864b2141::t_244940df45117f 198
+  s_6a2d8b864b2141::t_59666b7a2af908 247
+  s_6a2d8b864b2141::t_546fb431b98703 273-274
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.4",
+  "base_commit_sha": "9b7cef902090df9bb4022104da00e8657e41b931",
+  "prompts": {},
+  "sessions": {
+    "s_6a2d8b864b2141": {
+      "agent_id": {
+        "tool": "opencode",
+        "id": "ses_f5a7fd084ffeuxxYNAtJ0As4Px",
+        "model": "muse-spark-1.3-contributor-free"
+      },
+      "human_author": "Kathir Eswaran <kathircp007@gmail.com>"
+    }
+  }
+}

@@ -1,0 +1,31 @@
+proprietary/webhook-pro/__tests__/cve-dispatch.spec.ts
+  s_6a2d8b864b2141::t_60bb16e7bc71b1 1-37,39-101,103-120
+  s_6a2d8b864b2141::t_1108d3d26afc9a 38
+  s_6a2d8b864b2141::t_c8d6666a66ce1e 102
+proprietary/webhook-pro/webhook-events-enterprise.service.ts
+  s_6a2d8b864b2141::t_d017c27dd3d2db 3
+  s_6a2d8b864b2141::t_7539377f80d056 222-244
+  s_6a2d8b864b2141::t_b6f3baddb38464 245-247
+  s_6a2d8b864b2141::t_9f0a7f084eb211 248-250
+proprietary/webhook-pro/webhook-events-pro.service.ts
+  s_6a2d8b864b2141::t_11c33ae74ae996 557-579
+  s_6a2d8b864b2141::t_6f313cf0d5e9ba 5
+  s_6a2d8b864b2141::t_e5b9717ffe4184 580-582
+  s_6a2d8b864b2141::t_4144b7d0df9b56 583-585
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.4",
+  "base_commit_sha": "0a7612f13a549aa96009a6c041632e368312cf24",
+  "prompts": {},
+  "sessions": {
+    "s_6a2d8b864b2141": {
+      "agent_id": {
+        "tool": "opencode",
+        "id": "ses_f5a7fd084ffeuxxYNAtJ0As4Px",
+        "model": "muse-spark-1.3-contributor-free"
+      },
+      "human_author": "Kathir Eswaran <kathircp007@gmail.com>"
+    }
+  }
+}

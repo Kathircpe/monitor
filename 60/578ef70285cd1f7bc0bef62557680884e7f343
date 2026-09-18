@@ -1,0 +1,28 @@
+apps/api/src/cve/cve-scan.service.ts
+  s_6a2d8b864b2141::t_4f801e89bc3e03 519-520,524-630
+  s_6a2d8b864b2141::t_87ffe86f95118b 124-162,631
+  s_6a2d8b864b2141::t_02bd13ab004f84 229-236
+  s_6a2d8b864b2141::t_5d6991b04b7897 2,9-10,15-20,31
+  s_6a2d8b864b2141::t_84353c90c356d6 163
+  s_6a2d8b864b2141::t_ded9f4554f0634 632
+apps/api/src/cve/__tests__/cve-scan-dispatch.spec.ts
+  s_6a2d8b864b2141::t_3a242d87c2eafa 1-87,89-125,132-135,139-200
+  s_6a2d8b864b2141::t_2f3a0b0f0fc768 126-131,136-138
+  s_6a2d8b864b2141::t_671ab703651d68 88
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.4",
+  "base_commit_sha": "60578ef70285cd1f7bc0bef62557680884e7f343",
+  "prompts": {},
+  "sessions": {
+    "s_6a2d8b864b2141": {
+      "agent_id": {
+        "tool": "opencode",
+        "id": "ses_f5a7fd084ffeuxxYNAtJ0As4Px",
+        "model": "muse-spark-1.3-contributor-free"
+      },
+      "human_author": "Kathir Eswaran <kathircp007@gmail.com>"
+    }
+  }
+}
