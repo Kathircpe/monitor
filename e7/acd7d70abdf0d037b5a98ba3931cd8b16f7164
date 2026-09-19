@@ -1,0 +1,22 @@
+apps/web/src/index.css
+  s_aa455ba80e8244::t_d241556ae05202 191-219
+apps/web/src/components/ConnectionSelector.tsx
+  s_aa455ba80e8244::t_d4bcc0bce140f5 479-484
+  s_aa455ba80e8244::t_f323c220af67ca 414-418
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.4",
+  "base_commit_sha": "e7acd7d70abdf0d037b5a98ba3931cd8b16f7164",
+  "prompts": {},
+  "sessions": {
+    "s_aa455ba80e8244": {
+      "agent_id": {
+        "tool": "opencode",
+        "id": "ses_f4545806dffeyIyGrNGSgUMst4",
+        "model": "muse-spark-1.3-contributor-free"
+      },
+      "human_author": "Kathir Eswaran <kathircp007@gmail.com>"
+    }
+  }
+}
