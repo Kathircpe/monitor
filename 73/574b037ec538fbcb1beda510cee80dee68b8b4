@@ -1,0 +1,27 @@
+apps/api/src/common/dto/connections.dto.ts
+  s_6ca37417fbb2fa::t_f2998dcbbf216b 85,91,98,104
+  s_6ca37417fbb2fa::t_4578a8b1494993 2
+  s_6ca37417fbb2fa::t_9a602d738b9d68 84,90,97,103
+  s_6ca37417fbb2fa::t_a80a80d661829e 88,95,101,106
+apps/api/src/cluster/cluster-discovery.service.ts
+  s_6ca37417fbb2fa::t_7c3c4e2e40d787 301-309
+  s_6ca37417fbb2fa::t_94ffc503dc82ae 310
+apps/api/src/cluster/cluster-discovery.ssh.spec.ts
+  s_6ca37417fbb2fa::t_f149b7192b13db 140-166
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.4",
+  "base_commit_sha": "73574b037ec538fbcb1beda510cee80dee68b8b4",
+  "prompts": {},
+  "sessions": {
+    "s_6ca37417fbb2fa": {
+      "agent_id": {
+        "tool": "opencode",
+        "id": "ses_f3c6adda8ffeZMqQ3sVSpEvQom",
+        "model": "muse-spark-1.3-contributor-free"
+      },
+      "human_author": "Kathir Eswaran <kathircp007@gmail.com>"
+    }
+  }
+}
