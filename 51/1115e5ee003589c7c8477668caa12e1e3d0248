@@ -1,0 +1,20 @@
+apps/api/src/common/interfaces/database-port.interface.ts
+  h_bf19f0f446d5d8 50
+apps/api/src/database/adapters/unified.adapter.ts
+  h_bf19f0f446d5d8 332-335
+apps/api/src/health/__tests__/health.service.spec.ts
+  h_bf19f0f446d5d8 18-19,30-31,84-146
+apps/api/src/health/health.service.ts
+  h_bf19f0f446d5d8 33,36,74-110,170-189,231-257
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.4",
+  "base_commit_sha": "511115e5ee003589c7c8477668caa12e1e3d0248",
+  "prompts": {},
+  "humans": {
+    "h_bf19f0f446d5d8": {
+      "author": "Kathir Eswaran <kathircp007@gmail.com>"
+    }
+  }
+}
