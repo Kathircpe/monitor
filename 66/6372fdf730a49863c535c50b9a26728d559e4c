@@ -1,0 +1,36 @@
+.github/actions/setup-node-pnpm/action.yml
+  s_8530f6fe17415f::t_98e9a1145ca24d 8,11
+apps/web/tsconfig.eslint.json
+  s_8530f6fe17415f::t_9347a5202c5431 1-5
+packages/agent/package.json
+  s_8530f6fe17415f::t_8097d0e55d013a 14-15
+  s_8530f6fe17415f::t_e780ca48763103 3
+  s_8530f6fe17415f::t_c2e0ecbe4d5e4f 28-29,33
+turbo.json
+  s_8530f6fe17415f::t_88059736413881 16
+proprietary/eslint.config.mjs
+  s_8530f6fe17415f::t_e03282178fdc9a 8-10,14,16
+  s_8530f6fe17415f::t_af8b17f8e9182d 11
+.prettierignore
+  s_8530f6fe17415f::t_456ad79bdaf5b9 33-34
+apps/web/eslint.config.mjs
+  s_8530f6fe17415f::t_983425bb8fa035 28
+package.json
+  s_8530f6fe17415f::t_cd910a09b4e9aa 132
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.4",
+  "base_commit_sha": "666372fdf730a49863c535c50b9a26728d559e4c",
+  "prompts": {},
+  "sessions": {
+    "s_8530f6fe17415f": {
+      "agent_id": {
+        "tool": "opencode",
+        "id": "ses_f28b2c749ffefy8WGDWNEWrnd6",
+        "model": "muse-spark-1.3-contributor-free"
+      },
+      "human_author": "Kathir Eswaran <kathircp007@gmail.com>"
+    }
+  }
+}
