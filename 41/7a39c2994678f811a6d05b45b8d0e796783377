@@ -1,0 +1,58 @@
+apps/api/src/migration/__tests__/fork-compat.spec.ts
+  s_0d7deb1fb41e62::t_dba318caedaa5d 1,12,14-17,19-21
+  s_0d7deb1fb41e62::t_3b675e2b4ec18a 13,18
+  s_0d7deb1fb41e62::t_e7695c2bf0cebc 22-23
+apps/api/src/migration/__tests__/migration-execution.service.spec.ts
+  s_0d7deb1fb41e62::t_8d6d473ab8964d 282
+  s_0d7deb1fb41e62::t_a6e19ac9e91e28 256-257,265,268-269
+  s_0d7deb1fb41e62::t_2166e14c78089b 326
+  s_0d7deb1fb41e62::t_c7c8250b3fe9d4 364
+  s_b79679c27a9aef::t_49d4d55325fd9d 110-119
+  s_0d7deb1fb41e62::t_3ed7eb76c7bd32 349
+  s_b79679c27a9aef::t_94c305c622580d 183,260,277,296,321,344,359,386
+  s_b79679c27a9aef::t_a5979b3da360fc 407,423,436,449
+  s_b79679c27a9aef::t_bec1a2d08fb3cc 131
+  s_0d7deb1fb41e62::t_a99e8e34188009 47,50,55
+  s_0d7deb1fb41e62::t_b383cbb40b6404 415,431
+  s_b79679c27a9aef::t_2337efe82df80c 465
+  s_0d7deb1fb41e62::t_503c33cd0c2cad 391
+  s_0d7deb1fb41e62::t_160b67de881023 398-406,408-414,416-422,424-430,432-435,437-448,450-464,466-478
+  s_0d7deb1fb41e62::t_cbdd3b8c923fbe 301
+apps/api/src/migration/migration-execution.service.ts
+  s_0d7deb1fb41e62::t_f664b8ac826930 74-78,80-83
+  h_bf19f0f446d5d8 79
+  s_0d7deb1fb41e62::t_03ce0e5343fbf2 17
+apps/api/src/migration/fork-compat.ts
+  s_0d7deb1fb41e62::t_b4ec4abcb98fd1 30-34
+  s_0d7deb1fb41e62::t_4b0af64ee90549 24-29
+  s_0d7deb1fb41e62::t_e8e18a5cf51ee6 23
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.4",
+  "base_commit_sha": "417a39c2994678f811a6d05b45b8d0e796783377",
+  "prompts": {},
+  "humans": {
+    "h_bf19f0f446d5d8": {
+      "author": "Kathir Eswaran <kathircp007@gmail.com>"
+    }
+  },
+  "sessions": {
+    "s_0d7deb1fb41e62": {
+      "agent_id": {
+        "tool": "opencode",
+        "id": "ses_f1d8646cdffetGNvH6VOzJ69Aq",
+        "model": "muse-spark-1.3-contributor-free"
+      },
+      "human_author": null
+    },
+    "s_b79679c27a9aef": {
+      "agent_id": {
+        "tool": "opencode",
+        "id": "ses_f2805d321ffezPy6XOQB428T5C",
+        "model": "muse-spark-1.3-contributor-free"
+      },
+      "human_author": "Kathir Eswaran <kathircp007@gmail.com>"
+    }
+  }
+}
