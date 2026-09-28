@@ -1,0 +1,339 @@
+apps/api/src/external-metrics/__tests__/live-only-controllers.spec.ts
+  s_b79679c27a9aef::t_8005cc91ddefa8 1-146
+apps/web/src/components/cluster/ClusterSlowlog.tsx
+  s_b79679c27a9aef::t_2797b2d56fdbf4 3,115
+apps/api/src/external-metrics/__tests__/otlp-metrics-protobuf.spec.ts
+  s_b79679c27a9aef::t_8005cc91ddefa8 1-231
+.env.example
+  s_b79679c27a9aef::t_2797b2d56fdbf4 50,55-57
+apps/api/src/external-metrics/external-metrics.module.ts
+  s_b79679c27a9aef::t_8005cc91ddefa8 1-14
+proprietary/cloud-auth/cloud-auth.guard.spec.ts
+  s_b79679c27a9aef::t_2797b2d56fdbf4 80-90
+apps/web/src/components/connection-selector/ConnectionSwitcher.test.tsx
+  s_b79679c27a9aef::t_2797b2d56fdbf4 358-403
+apps/api/test/connection-type-postgres.e2e-spec.ts
+  s_b79679c27a9aef::t_8005cc91ddefa8 1-95
+apps/web/src/components/cluster/NodeStatsComparison.tsx
+  s_b79679c27a9aef::t_2797b2d56fdbf4 3,42
+apps/web/src/components/ConnectionSelector.tsx
+  s_b79679c27a9aef::t_2797b2d56fdbf4 14-15,96,134,391,418-422,429-450,452,454,459,461-462,464,466,471,473-474,489-496
+  s_b79679c27a9aef::t_553c5c107db491 497
+apps/web/src/components/cluster/ClusterTopologyGraph.tsx
+  s_b79679c27a9aef::t_2797b2d56fdbf4 17,351
+apps/api/src/external-metrics/__tests__/external-metrics-store.spec.ts
+  s_b79679c27a9aef::t_8005cc91ddefa8 1-318
+apps/api/src/external-metrics/external-metrics-store.module.ts
+  s_b79679c27a9aef::t_8005cc91ddefa8 1-8
+apps/web/src/utils/connectionType.ts
+  s_b79679c27a9aef::t_8005cc91ddefa8 1-17
+apps/web/src/components/cluster/SlotHeatmap.tsx
+  s_b79679c27a9aef::t_2797b2d56fdbf4 3,158-164
+apps/api/src/vector-search/vector-search.controller.ts
+  s_b79679c27a9aef::t_2797b2d56fdbf4 11,25-29,33-34,91
+apps/api/src/ai-observability/__tests__/otel-ingest.controller.spec.ts
+  s_b79679c27a9aef::t_2797b2d56fdbf4 37-58
+apps/api/src/metrics/__tests__/metrics.controller.external.spec.ts
+  s_b79679c27a9aef::t_8005cc91ddefa8 1-105
+apps/api/src/storage/adapters/postgres.adapter.ts
+  s_b79679c27a9aef::t_b8702b4585c430 1880-1881,4377-4378,4389,4404,4428,4453
+apps/web/src/hooks/__tests__/useMigrationPlan.test.ts
+  s_b79679c27a9aef::t_8005cc91ddefa8 1-33
+apps/web/src/api/client.test.ts
+  s_b79679c27a9aef::t_8005cc91ddefa8 143
+  s_b79679c27a9aef::t_2797b2d56fdbf4 4-6,112-142
+apps/api/src/external-metrics/__tests__/live-only-controllers.http.spec.ts
+  s_b79679c27a9aef::t_8005cc91ddefa8 1-129
+apps/api/src/ai-observability/otlp-body-parsing.ts
+  s_b79679c27a9aef::t_8005cc91ddefa8 1-100
+apps/web/src/pages/monitor/sessions-table.tsx
+  s_b79679c27a9aef::t_2797b2d56fdbf4 11,29
+apps/api/src/metrics/commandstats-parser.ts
+  s_b79679c27a9aef::t_8005cc91ddefa8 45
+  s_b79679c27a9aef::t_2797b2d56fdbf4 6-7,20-27,43-44,49-50
+apps/api/src/external-metrics/otlp-metrics-protobuf.ts
+  s_b79679c27a9aef::t_8005cc91ddefa8 1-96
+apps/api/src/memory-analytics/memory-analytics.service.ts
+  s_b79679c27a9aef::t_2797b2d56fdbf4 40-43,50-52
+  s_b79679c27a9aef::t_e7765c94d9395d 53
+apps/api/src/metrics/latencystats-poller.service.ts
+  s_b79679c27a9aef::t_2797b2d56fdbf4 64-67
+apps/api/src/external-metrics/external-connection-unsupported.error.ts
+  s_b79679c27a9aef::t_8005cc91ddefa8 1-6
+apps/web/src/components/migration/analysis-form/preflight.ts
+  s_b79679c27a9aef::t_2797b2d56fdbf4 26-28,142-143
+  s_b79679c27a9aef::t_7a1b0ebf86fe69 144-145
+apps/web/src/pages/AiCacheMemory.tsx
+  s_b79679c27a9aef::t_2797b2d56fdbf4 14,273-276,280-282
+apps/web/src/components/ConnectionSelector.test.tsx
+  s_b79679c27a9aef::t_2797b2d56fdbf4 238-252
+apps/web/src/api/client.ts
+  s_b79679c27a9aef::t_2797b2d56fdbf4 95-118,361-364
+  s_b79679c27a9aef::t_2a74cd972e3ff3 365-366
+apps/api/src/common/interfaces/database-port.interface.ts
+  s_b79679c27a9aef::t_2797b2d56fdbf4 47
+proprietary/anomaly-detection/anomaly.service.ts
+  s_b79679c27a9aef::t_8005cc91ddefa8 2641
+  s_b79679c27a9aef::t_2797b2d56fdbf4 432-435,692,842,973-977,1101,1262,1268,1273,1281,1286,1297,1302-1311,1327,2638-2640,2649-2650
+apps/web/src/pages/Latency.tsx
+  s_b79679c27a9aef::t_2797b2d56fdbf4 10,253,289,319,362
+apps/api/src/external-metrics/__tests__/live-connection.guard.spec.ts
+  s_b79679c27a9aef::t_8005cc91ddefa8 1-163
+apps/api/src/external-metrics/__tests__/external-connection-unsupported.filter.spec.ts
+  s_b79679c27a9aef::t_8005cc91ddefa8 1-31
+apps/api/src/migration/migration.service.ts
+  s_b79679c27a9aef::t_2797b2d56fdbf4 19,36
+apps/web/src/pages/monitor/schedules-table.tsx
+  s_b79679c27a9aef::t_2797b2d56fdbf4 12,35
+apps/web/src/components/webhooks/WebhookList.tsx
+  s_b79679c27a9aef::t_2797b2d56fdbf4 4,17-20
+apps/api/src/config/env.schema.ts
+  s_b79679c27a9aef::t_2797b2d56fdbf4 16-24,206,208
+apps/api/src/memory-analytics/__tests__/memory-analytics.service.spec.ts
+  s_b79679c27a9aef::t_2b88b0fb8e09db 280
+  s_b79679c27a9aef::t_2797b2d56fdbf4 6-8,161-279
+apps/api/src/external-metrics/__tests__/otel-metrics-ingest.service.spec.ts
+  s_b79679c27a9aef::t_8005cc91ddefa8 1-298
+apps/api/src/external-metrics/otel-metrics-ingest.controller.ts
+  s_b79679c27a9aef::t_8005cc91ddefa8 1-60
+apps/web/src/hooks/useConnection.ts
+  s_b79679c27a9aef::t_2797b2d56fdbf4 14
+apps/api/src/ai-observability/__tests__/otel-ingest-auth.spec.ts
+  s_b79679c27a9aef::t_8005cc91ddefa8 1-81
+apps/api/src/mcp/mcp-helpers.ts
+  s_b79679c27a9aef::t_2797b2d56fdbf4 10,75-77
+apps/api/src/migration/__tests__/migration-execution.service.spec.ts
+  s_b79679c27a9aef::t_d4ad4bfd2d3e20 559-563
+  s_b79679c27a9aef::t_2797b2d56fdbf4 541-558,564-585
+proprietary/cloud-auth/cloud-auth.guard.ts
+  s_b79679c27a9aef::t_2797b2d56fdbf4 42
+apps/web/src/components/connection-selector/ConnectionSwitcher.tsx
+  s_b79679c27a9aef::t_2797b2d56fdbf4 7,132,236-240
+apps/web/src/components/layout/AppLayout.tsx
+  s_b79679c27a9aef::t_2797b2d56fdbf4 10,116,138-140,148-150,158-160,168-170,178-180,196-198,207-209,218-220,228-230,238-240,256-268,276-278,294-296,304-306,350-352
+apps/api/src/migration/migration-execution.service.ts
+  s_b79679c27a9aef::t_1ee910ea272403 73-74
+  s_b79679c27a9aef::t_2797b2d56fdbf4 19
+apps/api/src/connections/connections.module.ts
+  s_b79679c27a9aef::t_2797b2d56fdbf4 9,13
+apps/web/src/components/cluster/ClusterNodesTable.tsx
+  s_b79679c27a9aef::t_2797b2d56fdbf4 3,310
+apps/web/src/components/migration/analysis-form/__tests__/preflight.test.ts
+  s_b79679c27a9aef::t_62a22ffef790fe 144
+  s_b79679c27a9aef::t_2797b2d56fdbf4 3-9,138-143
+apps/api/src/external-metrics/external-connection-unsupported.filter.ts
+  s_b79679c27a9aef::t_8005cc91ddefa8 1-20
+apps/web/src/pages/AnomalyDashboard.tsx
+  s_b79679c27a9aef::t_2797b2d56fdbf4 11,603-608,664-669
+apps/web/src/components/dashboard/OverviewCards.tsx
+  s_b79679c27a9aef::t_2797b2d56fdbf4 41-45
+apps/web/src/components/pages/cache-proposals/PendingCard.test.tsx
+  s_b79679c27a9aef::t_2797b2d56fdbf4 25-27,103-105,194-208,210-235
+  s_b79679c27a9aef::t_8005cc91ddefa8 209,236
+apps/api/src/fleet/__tests__/fleet.service.spec.ts
+  s_b79679c27a9aef::t_2797b2d56fdbf4 90-129
+apps/web/src/components/connection-selector/ConnectionTypeBadge.tsx
+  s_b79679c27a9aef::t_8005cc91ddefa8 1-13
+apps/api/src/external-metrics/__tests__/external-metrics.integration.spec.ts
+  s_b79679c27a9aef::t_8005cc91ddefa8 1-138
+apps/web/src/components/connection-selector/OtlpPushTab.tsx
+  s_b79679c27a9aef::t_8005cc91ddefa8 1-191
+apps/api/src/migration/__tests__/migration.service.spec.ts
+  s_b79679c27a9aef::t_2797b2d56fdbf4 2,161-190
+  s_b79679c27a9aef::t_53dbb265c61908 191-192
+apps/api/src/metrics/__tests__/latencystats-poller.service.spec.ts
+  s_b79679c27a9aef::t_7d007adffb1a01 230
+  s_b79679c27a9aef::t_2797b2d56fdbf4 8-9,212-229
+apps/api/src/auth/guards/public-paths.ts
+  s_b79679c27a9aef::t_2797b2d56fdbf4 11
+apps/web/src/components/cluster/ClusterTopology.tsx
+  s_b79679c27a9aef::t_2797b2d56fdbf4 3,263
+apps/web/src/components/cluster/ReplicationLag.tsx
+  s_b79679c27a9aef::t_2797b2d56fdbf4 2,19
+apps/api/src/prometheus/prometheus.service.ts
+  s_b79679c27a9aef::t_8005cc91ddefa8 334-335,998-999,1353-1354
+  s_b79679c27a9aef::t_2797b2d56fdbf4 63,277-280,332-333,336-339,894-913,957-964,974-997,1235-1236,1254-1264,1287,1289-1297,1299-1309,1318-1352,1355-1385,1391,1393-1394,1396-1399,1401-1408,1411-1416,1444,1446-1471,1530-1546,1549-1551,1553-1566,1569-1603,1611,1617-1630,1632-1634,1641-1652,1656,1658-1667,1669-1674,1677,1704,1706-1707,1713,1727-1729,1734-1742,2548,2558-2562
+apps/web/src/pages/ClientAnalytics.tsx
+  s_b79679c27a9aef::t_2797b2d56fdbf4 9,228-233,283,335,402
+apps/web/src/components/webhooks/WebhookDeliveries.tsx
+  s_b79679c27a9aef::t_2797b2d56fdbf4 5,108
+apps/web/src/components/LiveConnectionGuard.tsx
+  s_b79679c27a9aef::t_8005cc91ddefa8 1-28
+apps/web/src/pages/AuditTrail.tsx
+  s_b79679c27a9aef::t_2797b2d56fdbf4 8,273-277
+apps/api/src/common/services/__tests__/multi-connection-poller.spec.ts
+  s_b79679c27a9aef::t_8005cc91ddefa8 1-128
+apps/api/src/prometheus/prometheus.external.spec.ts
+  s_b79679c27a9aef::t_8005cc91ddefa8 1-448
+apps/web/src/pages/VectorSearch.tsx
+  s_b79679c27a9aef::t_2797b2d56fdbf4 3,63-67,109-113
+apps/api/src/ai-observability/__tests__/otlp-body-parsing.spec.ts
+  s_b79679c27a9aef::t_8005cc91ddefa8 1-177
+apps/web/src/components/ConnectionSelector.single-connection.test.tsx
+  s_b79679c27a9aef::t_8005cc91ddefa8 1-98
+apps/web/src/components/dashboard/OverviewCards.test.tsx
+  s_b79679c27a9aef::t_8005cc91ddefa8 1-35
+apps/web/src/pages/ClientAnalyticsDeepDive.tsx
+  s_b79679c27a9aef::t_2797b2d56fdbf4 10,467,576
+apps/web/src/components/connection-selector/OtlpPushTab.test.tsx
+  s_b79679c27a9aef::t_8005cc91ddefa8 1-79
+apps/web/src/components/pages/cache-proposals/PendingCard.tsx
+  s_b79679c27a9aef::t_8005cc91ddefa8 197-199
+  s_b79679c27a9aef::t_2797b2d56fdbf4 1,12-14,77-78,82-89,194-196,239-240,245-250
+apps/web/src/hooks/useMigrationPlan.ts
+  s_b79679c27a9aef::t_2797b2d56fdbf4 3,39-41
+proprietary/key-analytics/__tests__/key-analytics.service.spec.ts
+  s_b79679c27a9aef::t_2797b2d56fdbf4 173-196
+apps/web/src/components/dashboard/ConnectionCard.tsx
+  s_b79679c27a9aef::t_2797b2d56fdbf4 5-6,11,14,32,34,40,42
+apps/web/src/components/pages/metric-forecasting/MetricDisabled.tsx
+  s_b79679c27a9aef::t_2797b2d56fdbf4 2,6-9
+apps/api/src/common/services/multi-connection-poller.ts
+  s_b79679c27a9aef::t_2797b2d56fdbf4 19,100-109,182,189-190,193,197-200,207,209-211
+apps/api/src/connections/connection-registry.service.ts
+  s_b79679c27a9aef::t_c27a7611c55c90 902
+  s_b79679c27a9aef::t_2797b2d56fdbf4 4,12-13,18-21,36,206-212,275-277,491-496,510,518,593,598,650-652,755,887,893-901
+  s_b79679c27a9aef::t_8005cc91ddefa8 213-214
+apps/web/src/components/dashboard/ConnectionCard.test.tsx
+  s_b79679c27a9aef::t_8005cc91ddefa8 1-34
+apps/api/src/connections/__tests__/connection-registry.external.spec.ts
+  s_b79679c27a9aef::t_8005cc91ddefa8 1-153
+apps/api/src/health/__tests__/health.service.spec.ts
+  s_b79679c27a9aef::t_2797b2d56fdbf4 5-8,85-201
+  s_b79679c27a9aef::t_8005cc91ddefa8 202-203
+docs/prometheus-metrics.md
+  s_b79679c27a9aef::t_2797b2d56fdbf4 496-500,506-512,516
+apps/api/src/external-metrics/__tests__/otel-metrics-ingest.controller.spec.ts
+  s_b79679c27a9aef::t_8005cc91ddefa8 1-295
+apps/web/src/components/migration/AnalysisForm.tsx
+  s_b79679c27a9aef::t_2797b2d56fdbf4 88-90
+apps/api/src/metrics/metrics.controller.ts
+  s_b79679c27a9aef::t_2797b2d56fdbf4 1,8,10-13,59-60,69,155,194,258
+  s_b79679c27a9aef::t_8005cc91ddefa8 9
+apps/api/src/migration/__tests__/migration-validation.service.spec.ts
+  s_b79679c27a9aef::t_2797b2d56fdbf4 246-278
+apps/api/src/migration/live-connections.ts
+  s_b79679c27a9aef::t_8005cc91ddefa8 1-16
+apps/web/src/utils/connectionType.test.ts
+  s_b79679c27a9aef::t_8005cc91ddefa8 1-17
+apps/web/src/components/LiveConnectionGuard.test.tsx
+  s_b79679c27a9aef::t_8005cc91ddefa8 1-38
+apps/api/src/external-metrics/otlp-metrics-types.ts
+  s_b79679c27a9aef::t_8005cc91ddefa8 1-80
+proprietary/bulk-delete/bulk-delete.controller.ts
+  s_b79679c27a9aef::t_2797b2d56fdbf4 18-21,34,44,61
+apps/api/src/external-metrics/external-metrics.adapter.ts
+  s_b79679c27a9aef::t_8005cc91ddefa8 1-178
+proprietary/key-analytics/key-analytics.service.ts
+  s_b79679c27a9aef::t_2797b2d56fdbf4 418,459
+apps/api/src/ai-observability/ai-observability.controller.ts
+  s_b79679c27a9aef::t_2797b2d56fdbf4 1,10,16,24,98
+apps/api/src/prometheus/prometheus.otlp-ingest.spec.ts
+  s_b79679c27a9aef::t_8005cc91ddefa8 1-70
+apps/web/src/components/ui/empty-state.test.tsx
+  s_b79679c27a9aef::t_8005cc91ddefa8 1-35
+apps/web/src/components/migration/analysis-form/ConnectionPicker.tsx
+  s_b79679c27a9aef::t_2797b2d56fdbf4 11,36-38,149
+apps/api/src/cve/cve.controller.ts
+  s_b79679c27a9aef::t_2797b2d56fdbf4 1,7-11,16-17,43
+docs/opentelemetry.md
+  s_b79679c27a9aef::t_2797b2d56fdbf4 8,14-19,43,45-155,173-180,229
+  s_b79679c27a9aef::t_8005cc91ddefa8 44
+apps/api/src/common/dto/connections.dto.ts
+  s_b79679c27a9aef::t_2797b2d56fdbf4 191-195,210-212
+apps/web/src/components/migration/analysis-form/EndpointPanel.tsx
+  s_b79679c27a9aef::t_2797b2d56fdbf4 4,109
+apps/web/src/components/ui/empty-state.tsx
+  s_b79679c27a9aef::t_8005cc91ddefa8 1-38
+apps/api/src/prometheus/prometheus.commandstats.spec.ts
+  s_b79679c27a9aef::t_8005cc91ddefa8 1-69
+apps/web/src/pages/ClusterDashboard.tsx
+  s_b79679c27a9aef::t_2797b2d56fdbf4 3,134-138,260,262-267
+apps/api/src/fleet/fleet.service.ts
+  s_b79679c27a9aef::t_2797b2d56fdbf4 67,72,107-110,112-118,129,155-157
+apps/api/src/external-metrics/external-metrics-store.ts
+  s_b79679c27a9aef::t_8005cc91ddefa8 1-208
+apps/web/src/pages/AiTraces.tsx
+  s_b79679c27a9aef::t_2797b2d56fdbf4 5,250-258
+apps/api/src/config/__tests__/env.schema.spec.ts
+  s_b79679c27a9aef::t_2797b2d56fdbf4 347-351
+apps/api/src/connections/__tests__/connection-registry.service.spec.ts
+  s_b79679c27a9aef::t_2797b2d56fdbf4 8,120,212,588,743
+packages/shared/src/types/connections.ts
+  s_b79679c27a9aef::t_2797b2d56fdbf4 72-73,93,161,184,194
+apps/api/src/ai-observability/otel-ingest.controller.ts
+  s_b79679c27a9aef::t_2797b2d56fdbf4 15-16,29,46,64
+apps/api/src/migration/migration-validation.service.ts
+  s_b79679c27a9aef::t_2797b2d56fdbf4 19,49
+  s_b79679c27a9aef::t_e8d9a2f7579b7e 50
+apps/api/src/external-metrics/otel-metrics-ingest.service.ts
+  s_b79679c27a9aef::t_8005cc91ddefa8 1-180
+apps/api/src/storage/adapters/__tests__/connection-type-storage.spec.ts
+  s_b79679c27a9aef::t_8005cc91ddefa8 1-88
+apps/api/src/ai-observability/otel-ingest-auth.ts
+  s_b79679c27a9aef::t_8005cc91ddefa8 1-25
+apps/api/src/auth/guards/actor.guard.spec.ts
+  s_b79679c27a9aef::t_2797b2d56fdbf4 87,158-159,430
+apps/web/src/pages/Dashboard.tsx
+  s_b79679c27a9aef::t_2797b2d56fdbf4 206
+proprietary/cloud-auth/cloud-auth.middleware.ts
+  s_b79679c27a9aef::t_2797b2d56fdbf4 46
+apps/api/src/ai-observability/otlp-json-shape.ts
+  s_b79679c27a9aef::t_8005cc91ddefa8 1-79
+apps/api/src/external-metrics/otlp-metric-map.ts
+  s_b79679c27a9aef::t_8005cc91ddefa8 1-185
+apps/api/src/external-metrics/__tests__/external-metrics.adapter.spec.ts
+  s_b79679c27a9aef::t_8005cc91ddefa8 1-161
+apps/api/src/main.ts
+  s_b79679c27a9aef::t_2797b2d56fdbf4 19,146,156
+proprietary/anomaly-detection/__tests__/anomaly.service.spec.ts
+  s_b79679c27a9aef::t_52797220724609 5971
+  s_b79679c27a9aef::t_2797b2d56fdbf4 23-24,5803-5969
+  s_b79679c27a9aef::t_8005cc91ddefa8 5970
+apps/api/src/metrics/__tests__/commandstats-poller.service.spec.ts
+  s_b79679c27a9aef::t_2797b2d56fdbf4 9-10,58,73,79,90-91,98-99,116,122,132,136,144,148,156-157,165,253-295
+  s_b79679c27a9aef::t_63c800f59511c9 296
+apps/api/src/monitor/monitor.controller.ts
+  s_b79679c27a9aef::t_2797b2d56fdbf4 21,121,130,158,174-176,178,347,400
+apps/api/src/mcp/mcp-helpers.spec.ts
+  s_b79679c27a9aef::t_8005cc91ddefa8 1-48
+apps/api/src/metrics/commandstats-poller.service.ts
+  s_b79679c27a9aef::t_2797b2d56fdbf4 20-21,59-62,136-143,152-153
+apps/api/src/external-metrics/__tests__/otlp-metric-map.spec.ts
+  s_b79679c27a9aef::t_8005cc91ddefa8 1-246
+apps/api/src/metrics/__tests__/commandstats-parser.spec.ts
+  s_b79679c27a9aef::t_2797b2d56fdbf4 47,55-69
+apps/api/src/app.module.ts
+  s_b79679c27a9aef::t_2797b2d56fdbf4 6,194
+apps/web/src/pages/KeyAnalytics.tsx
+  s_b79679c27a9aef::t_2797b2d56fdbf4 9,451,485,574-578,784-789,945-950,1042-1052
+apps/api/src/external-metrics/live-connection.guard.ts
+  s_b79679c27a9aef::t_8005cc91ddefa8 1-72
+apps/web/src/components/cluster/SlotMigrations.tsx
+  s_b79679c27a9aef::t_2797b2d56fdbf4 2,31
+apps/api/src/storage/adapters/sqlite.adapter.ts
+  s_b79679c27a9aef::t_2797b2d56fdbf4 4119,4135-4137,4140-4141,4152,4168,4199,4228
+apps/api/src/health/health.service.ts
+  s_b79679c27a9aef::t_2797b2d56fdbf4 62-69,71-73,140-153,257-261,264
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.4",
+  "base_commit_sha": "f74464ef3acbecb360efa7b70ac6f1eeb47a2632",
+  "prompts": {},
+  "humans": {
+    "h_bf19f0f446d5d8": {
+      "author": "Kathir Eswaran <kathircp007@gmail.com>"
+    }
+  },
+  "sessions": {
+    "s_b79679c27a9aef": {
+      "agent_id": {
+        "tool": "opencode",
+        "id": "ses_f2805d321ffezPy6XOQB428T5C",
+        "model": "muse-spark-1.3-contributor-free"
+      },
+      "human_author": "Kathir Eswaran <kathircp007@gmail.com>"
+    }
+  }
+}
