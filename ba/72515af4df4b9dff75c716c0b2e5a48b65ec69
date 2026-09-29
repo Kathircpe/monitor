@@ -1,0 +1,29 @@
+proprietary/anomaly-detection/anomaly.service.ts
+  s_c779a6bf1ec0ec::t_9b15f564a0ca7e 1756,1759-1760
+  s_c779a6bf1ec0ec::t_22504b13b70d7f 1804
+proprietary/anomaly-detection/__tests__/anomaly.service.spec.ts
+  s_c779a6bf1ec0ec::t_27e2bad9447435 5472-5527,5529-5541
+  s_c779a6bf1ec0ec::t_87a5707fba8016 13
+  s_c779a6bf1ec0ec::t_7a7440685bd8b7 5528
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.4",
+  "base_commit_sha": "ba72515af4df4b9dff75c716c0b2e5a48b65ec69",
+  "prompts": {},
+  "humans": {
+    "h_bf19f0f446d5d8": {
+      "author": "Kathir Eswaran <kathircp007@gmail.com>"
+    }
+  },
+  "sessions": {
+    "s_c779a6bf1ec0ec": {
+      "agent_id": {
+        "tool": "opencode",
+        "id": "ses_f13561232ffe7x2Fr4nRvWlcRz",
+        "model": "muse-spark-1.3-contributor-free"
+      },
+      "human_author": "Kathir Eswaran <kathircp007@gmail.com>"
+    }
+  }
+}
