@@ -1,0 +1,44 @@
+proprietary/anomaly-detection/anomaly.service.ts
+  s_c779a6bf1ec0ec::t_02cd119459e1af 1815,1817-1821,1830,1836,1841,1856,1863-1885,1893-1944,2013
+  s_c779a6bf1ec0ec::t_f6fd1c6d15070c 1248
+  s_c779a6bf1ec0ec::t_a53e27818796b6 261-267,272
+  s_c779a6bf1ec0ec::t_a80bb1f6e2b371 1744,1758-1760
+  s_c779a6bf1ec0ec::t_e8efa3fa72e6f7 1803
+  s_c779a6bf1ec0ec::t_4df6ba1a5ee7d1 1972,1983-2008
+  s_c779a6bf1ec0ec::t_930f177d7be544 1112
+  s_c779a6bf1ec0ec::t_287bcaeba2f7b3 1278-1282
+  s_c779a6bf1ec0ec::t_c486c4bfeaacaa 71,74,76-77
+  s_c779a6bf1ec0ec::t_7bf9cfca22cfb2 1945
+  s_c779a6bf1ec0ec::t_1fca9f5bc13ce5 2009-2012
+  s_c779a6bf1ec0ec::t_6fd4cebce26c83 2014
+proprietary/anomaly-detection/__tests__/acl-drift-detector.spec.ts
+  s_c779a6bf1ec0ec::t_ff0d7915eb1a7d 296
+  s_c779a6bf1ec0ec::t_915c3ca8912a81 3,6-7
+  s_c779a6bf1ec0ec::t_2f804e0a728880 190-295
+proprietary/anomaly-detection/acl-drift-detector.ts
+  s_c779a6bf1ec0ec::t_0e40596a49af22 85-95
+  s_c779a6bf1ec0ec::t_61f4f729902595 58-63
+  s_c779a6bf1ec0ec::t_b57de1f6db5227 271,274-275
+  s_c779a6bf1ec0ec::t_76d008ce52552b 241-242,261-270,272,277-362
+  s_c779a6bf1ec0ec::t_e353ab657a8fdc 273,276
+  s_c779a6bf1ec0ec::t_2bb6c4d2c6278c 29,32-35
+proprietary/anomaly-detection/__tests__/anomaly.service.spec.ts
+  s_c779a6bf1ec0ec::t_a89c2acfbf6525 5319-5335
+  s_c779a6bf1ec0ec::t_7ba44a2d7e2c63 5438-5471
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.4",
+  "base_commit_sha": "0449cae0381cad431755e6479cca51df851ad2b1",
+  "prompts": {},
+  "sessions": {
+    "s_c779a6bf1ec0ec": {
+      "agent_id": {
+        "tool": "opencode",
+        "id": "ses_f13561232ffe7x2Fr4nRvWlcRz",
+        "model": "muse-spark-1.3-contributor-free"
+      },
+      "human_author": "Kathir Eswaran <kathircp007@gmail.com>"
+    }
+  }
+}
