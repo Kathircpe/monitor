@@ -1,0 +1,23 @@
+proprietary/anomaly-detection/acl-drift-detector.ts
+  s_c779a6bf1ec0ec::t_586a16abc30ac7 290-292,311-319
+proprietary/anomaly-detection/__tests__/acl-drift-detector.spec.ts
+  s_c779a6bf1ec0ec::t_4bef8861e3d7ef 255-275
+proprietary/anomaly-detection/__tests__/anomaly.service.spec.ts
+  s_c779a6bf1ec0ec::t_70db7c1c592acb 5449-5451
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.4",
+  "base_commit_sha": "a6f59159d8f269db588af11f067fb6e0c40dd44b",
+  "prompts": {},
+  "sessions": {
+    "s_c779a6bf1ec0ec": {
+      "agent_id": {
+        "tool": "opencode",
+        "id": "ses_f13561232ffe7x2Fr4nRvWlcRz",
+        "model": "muse-spark-1.3-contributor-free"
+      },
+      "human_author": "Kathir Eswaran <kathircp007@gmail.com>"
+    }
+  }
+}
