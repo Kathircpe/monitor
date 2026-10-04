@@ -2,6 +2,7 @@ apps/web/src/index.css
   s_aa455ba80e8244::t_d241556ae05202 191-219
 apps/web/src/components/ConnectionSelector.tsx
   s_aa455ba80e8244::t_d4bcc0bce140f5 604-609
+  s_889213cb79c33a::t_b546e68c03ead5 516,518-519
 ---
 {
   "schema_version": "authorship/3.0.0",
@@ -9,6 +10,14 @@ apps/web/src/components/ConnectionSelector.tsx
   "base_commit_sha": "31e61eaf4157059348b3c0f25ed91e5459c517b4",
   "prompts": {},
   "sessions": {
+    "s_889213cb79c33a": {
+      "agent_id": {
+        "tool": "opencode",
+        "id": "ses_ef98ac324ffeJc0kUDRR74v5VD",
+        "model": "muse-spark-1.3-contributor-free"
+      },
+      "human_author": "Kathir Eswaran <kathircp007@gmail.com>"
+    },
     "s_aa455ba80e8244": {
       "agent_id": {
         "tool": "opencode",
