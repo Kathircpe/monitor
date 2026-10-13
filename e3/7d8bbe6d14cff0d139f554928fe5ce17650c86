@@ -1,0 +1,41 @@
+apps/api/src/common/interfaces/database-port.interface.ts
+  s_af92652815c068::t_d8d79a9189b159 128-134
+apps/api/src/connections/connection-registry.service.ts
+  s_af92652815c068::t_2b4e92ba4b303e 423-425
+  s_af92652815c068::t_52ee8149307c10 972
+apps/api/src/cluster/cluster-discovery.service.ts
+  s_af92652815c068::t_97b16cd20af022 37-38
+  s_af92652815c068::t_7fd86a8e806c67 325-327
+  s_af92652815c068::t_3898aa3a8f72c3 1
+  s_af92652815c068::t_78da91d7ce7fc9 79
+  s_af92652815c068::t_2c58155137be34 217-222
+  s_af92652815c068::t_b2baeb8cb31d6a 91,97-103,105-108
+  s_af92652815c068::t_77191067c12520 364,373-376
+  s_af92652815c068::t_e0593e6ec7e026 276-277
+  s_af92652815c068::t_45240505d36b6e 481,492-518
+  s_af92652815c068::t_6e39a99f7201b4 519
+apps/api/src/cluster/cluster-discovery.ssh.spec.ts
+  s_af92652815c068::t_c18886eba060c7 167-245
+apps/api/src/database/adapters/unified.adapter.ts
+  s_af92652815c068::t_de5cbeeb61a30e 246
+  s_af92652815c068::t_de5b0812d4518b 293
+  s_af92652815c068::t_7b832bb18a7faa 337-340
+  s_af92652815c068::t_8f408611076562 119
+  s_af92652815c068::t_b8480e74f62264 313
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.5",
+  "base_commit_sha": "e37d8bbe6d14cff0d139f554928fe5ce17650c86",
+  "prompts": {},
+  "sessions": {
+    "s_af92652815c068": {
+      "agent_id": {
+        "tool": "opencode",
+        "id": "ses_ef0218776ffelJkPYiGlp85xAu",
+        "model": "muse-spark-1.3-contributor-free"
+      },
+      "human_author": "Kathir Eswaran <kathircp007@gmail.com>"
+    }
+  }
+}
